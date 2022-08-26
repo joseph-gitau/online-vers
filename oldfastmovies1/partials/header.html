@@ -1,0 +1,50 @@
+
+<header>
+
+        <nav id="navbar">
+        <div class="searchIcon">
+        <svg xmlns="https://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+        </svg>
+        </div>
+            <div class="hamberger" id="hamberger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <a href="https://fastmovies1.com/index"><img class="logomain" src="https://fastmovies1.com/resources/images/logo.png" alt="logo-main"></a>
+            <ul class="navlinks">
+                <li>
+                <!--<div class="search-boxn">
+                    <select name="mstype" id="msearch_type" class="selectr">
+                        <option value="movies" selected>Search Movies</option>
+                        <option value="series">Search Series</option>
+                    </select>
+                    <input type="text" name="svalue" id="search" autocomplete="off" placeholder="Search movies" />
+                    <div class="loader-se" style="display: none;">
+                        <img src="https://fastmovies1.com/resources/images/Spinner.gif" alt="Spinner">
+                    </div>
+                    <div class="result"></div>
+                </div>-->
+                <div class="normal-search">
+                        <form action="/results" method="GET">
+                            <input type="text" id="search" name="search" placeholder="Search Movie or Series" autocomplete="off">
+                            <button type="submit" value="stext"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        </form>
+                        <div class="loader-se" style="display: none;">
+                            <img src="https://fastmovies1.com/resources/images/Spinner.gif" alt="Spinner">
+                        </div>
+                        <div class="result" id="result"></div>
+                    </div>
+                </li>
+                <li><a href="https://fastmovies1.com/index">Home</a></li>
+                <li><a href="https://fastmovies1.com/tvseries">Tv Series</a></li>
+                <li><a href="https://fastmovies1.com/browse">Movies</a></li>
+                <li><a href="https://fastmovies1.com/Latest">Latest</a></li>
+            </ul>
+
+        </nav>
+    </header>
+    <div class="loadgif">
+        <div class="loader5"></div>
+    </div>

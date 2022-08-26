@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    color: #fff;
+    font-family: 'lato', Arial;
+    font-size: 18px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+}
+body{
+    /* background-color: rgb(88, 84, 84); */
+    overflow-x: hidden;
+}
+/*------------------global items--------------*/
+a{
+    text-decoration: none;
+    color: #e67e22;
+}
+
+@media screen and (min-width: 767px){
+    #popular-downloads-mobile{
+        display: none;
+    }
+    #popular-downloads{
+        background-color: rgb(87, 87, 87);
+        /* backdrop-filter: blur(50px);
+        -webkit-backdrop-filter: blur(50px); */
+        width: 100vw;
+        margin: auto;
+        padding-bottom: 5vh;
+        position: relative;
+        
+    }
+    .request{
+        float: right;
+        padding-right: 10%;
+        padding-top: 30px;
+    }
+    .popular-head{
+        color: #e67e22;
+        padding-left: 18%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 1.3em;
+    }
+    .popular-head i{
+        font-size: 1.5em;
+        padding-right: 5px;
+    }
+    .new1{
+        width:70%;
+        margin-left: 15%;
+        border: none;
+        border-top: 0.2px solid #e67e22;
+    }
+    #popular-downloads .row{
+        max-width: 80vw;
+        margin: auto;
+        padding-top: 10px;
+        
+    }
+    #popular-downloads .row:nth-child(3){
+        margin-top: 5vh;
+    }
+    .bt-info{
+        width: 20vw;
+        height: 40vh;
+        position: relative;
+    }
+    .col img{
+        width: 90%;
+        height: 92% !important;
+        margin-left: 10%;
+        border: 3px solid #fff;
+        border-radius: 5px;
+    }
+    .type{
+        position: absolute;
+        top: 25%;
+        left: 25%;
+        color: #fff;
+        justify-content: center;
+        opacity: 0;
+    }
+    .middle{
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        text-align: center;
+        border: 1px solid #e67e22;
+        padding: 8px;
+        border-radius: 50px;
+        background-color: #e67e22;
+        opacity: 0;
+    }
+    .middle:hover{
+        background-color: #cf6d17;
+        transition: .35s ease-in-out;
+        cursor: pointer;
+    }
+    .middle a{
+        text-decoration: none;
+        color: #fff;
+    }
+    .col:hover img{
+        opacity: 0.7;
+        transition: .35s ease-in-out;
+        border: 3px solid #e67e22;
+        cursor: pointer;
+    }
+    .col:hover .type,
+    .col:hover .middle-br{
+        opacity: 1;
+        transition: .35s ease-in-out;
+    }
+    .col:hover .middle{
+        opacity: 1;
+        transition: .35s ease-in-out;
+    }
+    .bt-txt{
+        background-color: aqdua;
+    }
+    .bt-txt .col{
+        padding-left: 2%;
+    }
+    .movie-info{
+        color: #fff;
+    }
+    .btn{
+        margin-top: 10px;
+    }
+    .btn a{
+        text-decoration: none;
+        border: 1px solid #e67e22;
+        border-radius: 50px;
+        padding: 8px 12px;
+        background-color: #e67e22;
+        color: #fff;
+        
+    }
+    .btn a:hover{
+        background-color: #cf6d17;
+        transition: .35s ease-in-out;
+    }
+    #latest-realeses{
+        background-color: rgb(29, 29, 29);
+    }
+    #latest-realeses .row{
+        max-width: 80vw;
+        margin: auto;
+    }
+    /*-------------------browse movies-------------------*/
+    #browse-movies{
+        height: 200vh;
+        width: 100vw;
+        background-color: rgb(49, 49, 49);
+    }
+    #browse-movies .row{
+        height: 50vh;
+        width: 90vw;
+        margin: auto;
+        padding-top: 2%;
+    }
+    .bt-br .col{
+        height: 100%;
+        position: relative;
+    }
+    .col img{
+        width: 80%;
+        height: 75%;
+    }
+    .bt-col span{
+        margin-left: 10%;
+        font-size: 1.2em;
+        display: flex;
+    }
+    .bt-col .bt-sp1{
+        font-size: 0.9em;
+        color: gray;
+    }
+    .bt-col .type{
+        top: 10%;
+    }
+    .bt-col .middle-br{
+        position: absolute;
+        top: 40%;
+        left: 25%;
+        font-size: .8em;
+        border: 1px solid #e67e22;
+        padding: 2px 2px 2px 1px;
+        background-color: #e67e22;
+        border-radius: 50px;
+        text-align: center;
+        opacity: 0;
+    }
+    .bt-col .middle-br:hover{
+        background-color: #cf6d17;
+        transition: .35s ease-in-out;
+        cursor: pointer;
+    }
+    .bt-col .middle-br a{
+        text-decoration: none;
+        color: #fff;
+    }
+}
+
+/*--------------------mobile screens---------------------------------------------------------------------------*/
+@media  screen and (max-width: 767px){
+    #popular-downloads,
+    #latest-realeses{
+        display: none;
+    }
+    
+}
