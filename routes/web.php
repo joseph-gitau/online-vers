@@ -8,6 +8,7 @@ use App\Http\Controllers\series;
 use App\Http\Controllers\movies;
 use App\Http\Controllers\latest;
 use App\Http\Controllers\search;
+use App\Http\Controllers\category;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,6 +40,7 @@ Route::get('/series/download/{id}', [seriesDetails::class, 'download']);
 Route::get('/movies', [movies::class, 'index']);
 Route::get('search/{id}', [search::class, 'index']);
 Route::get('/results/{id}', [search::class, 'index']);
+Route::get('/movies/category/{id}', [category::class, 'index']);
 /* Route::get('/series', function () {
     return view('series');
 }); */

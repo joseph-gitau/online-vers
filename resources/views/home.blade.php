@@ -42,10 +42,10 @@
             $oldname = $user['title'];
             $newname = preg_replace('/[^A-Za-z0-9\-]/', '-', $oldname);
             $sid = $user['id'];
-            $server = "31.22.4.240";
-            $username = "fastmovi_burt";
-            $password = "zy;?f9lDgBUM";
-            $dbname = "fastmovi_epiz_28351378_fastMovies";
+            $server = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "fastmovi_epiz_28351378_fastMovies_local";
             
             $conn = mysqli_connect($server, $username, $password, $dbname);
             $sql = "SELECT * FROM newfastmovies WHERE movie_id = $sid";
