@@ -41,6 +41,7 @@ Route::get('/movies', [movies::class, 'index']);
 Route::get('search/{id}', [search::class, 'index']);
 Route::get('/results/{id}', [search::class, 'index']);
 Route::get('/movies/category/{id}', [category::class, 'index']);
+Route::get('/series/category/{id}', [category::class, 'series']);
 /* Route::get('/series', function () {
     return view('series');
 }); */
