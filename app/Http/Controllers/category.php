@@ -52,4 +52,28 @@ class category extends Controller
 
         return view('movies.category.index', ['id' => $movies, 'users' => $tmdb_content, 'cat' => $send_id]);
     }
+
+
+    // series controller
+    public function series($id)
+    {
+        $cache_id = URL::full();
+        if (Cache::has('series' . $cache_id) && Cache::has('series_type' . $cache_id)) {
+            $serie = Cache::get('series' . $cache_id);
+            $send_id = Cache::get('series_type' . $cache_id);
+        } else {
+            // select all series from db where category is $id
+            $serie1 = DB::table('series')->where('genre', 'like', '%' . $id . '%')->orderBy('a_id', 'Desc')->paginate(20);
+            // serie type
+            $send_id1 = $id;
+            // dd($serie);
+            // put in cache
+            Cache::put('series' . $cache_id, $serie1, 1440);
+            Cache::put('series_type' . $cache_id, $send_id1, 1440);
+            // get cache
+            $serie = Cache::get('series' . $cache_id);
+            $send_id = Cache::get('series_type' . $cache_id);
+        }
+        return view('series.category.index', ['users' => $serie, 'cat' => $send_id]);
+    }
 }

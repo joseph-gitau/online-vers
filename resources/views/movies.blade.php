@@ -50,10 +50,14 @@
                     // echo $count;
                     $sid = $data['id'];
                     // $conn = new mysqli('31.22.4.240', 'fastmovi_burt', 'zy;?f9lDgBUM', 'fastmovi_epiz_28351378_fastMovies');
-                    $server = "31.22.4.240";
-                    $username = "fastmovi_burt";
-                    $password = "zy;?f9lDgBUM";
-                    $dbname = "fastmovi_epiz_28351378_fastMovies";
+                    /* $server = '31.22.4.240';
+                                        $username = 'fastmovi_burt';
+                                        $password = 'zy;?f9lDgBUM';
+                                        $dbname = 'fastmovi_epiz_28351378_fastMovies'; */
+                    $server = 'localhost';
+                    $username = 'root';
+                    $password = '';
+                    $dbname = 'fastmovi_epiz_28351378_fastMovies_local';
                     
                     $conn = mysqli_connect($server, $username, $password, $dbname);
                     $sql = "SELECT * FROM newfastmovies WHERE movie_id = $sid";
@@ -65,8 +69,7 @@
                     ?>
                     {{-- cards --}}
                     <div class="relative w-44 md:w-52 lg:w-56 group my-4 m-auto">
-                        <img src="https://image.tmdb.org/t/p/w500{{ $data['poster_path'] }}"
-                            alt="{{ $data['title'] }}"
+                        <img src="https://image.tmdb.org/t/p/w500{{ $data['poster_path'] }}" alt="{{ $data['title'] }}"
                             class="w-48 md:w-48 lg:w-48 h-auto md:h-60 lg:h-64 m-auto border-2 border-black dark:border-white rounded group-hover:opacity-60 group-hover:cursor-pointer duration-300">
                         <span
                             class="absolute top-[15%] left-[18%] text-2xl font-bold text-white hidden group-hover:block duration-500">
