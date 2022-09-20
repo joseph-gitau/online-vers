@@ -275,6 +275,9 @@
                     <li class="w-1/3 text-base font-bold text-500 py-1.5 hover:text-600 cursor-pointer">
                         <a href="/latest">Latest</a>
                     </li>
+                    <li class="w-1/3 text-base font-bold text-500 py-1.5 hover:text-600 cursor-pointer">
+                        <a href="/contact">Contact us</a>
+                    </li>
 
                 </ul>
             </div>
@@ -292,7 +295,7 @@
                         <a href="/disclaimer">Disclaimer</a>
                     </li>
                     <li class="w-1/3 text-base font-bold text-500 py-1.5 hover:text-600 cursor-pointer">
-                        <a href="#">Contact</a>
+                        <a href="/contact">Contact us</a>
                     </li>
                     <li class="w-2/3 text-base font-bold text-500 py-1.5 hover:text-600 cursor-pointer">
                         <a href="/terms">Terms and conditions</a>

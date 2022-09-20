@@ -58,6 +58,10 @@ Route::get('/terms', function () {
 Route::get('/moviesIndex', [movies::class, 'indexmovies']);
 // seriesIndex
 Route::get('/seriesIndex', [series::class, 'indexseries']);
+// contact
+Route::get('/contact', function () {
+    return view('contact');
+});
 
 
 // login pages
