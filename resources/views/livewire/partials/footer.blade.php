@@ -247,7 +247,7 @@
     ?>
 
     {{-- The Master doesn't talk, he acts. --}}
-    <div class="w-full h-auto pt-8 bg-gray-200 dark:bg-slate-800">
+    <div class="w-full h-auto pt-8 bg-gray-200 dark:bg-slate-800" id="footer">
         <div class="w-full flex items-center m-auto">
             <h1 class="text-3xl text-500 font-bold m-auto">Fastmovies1</h1>
         </div>
@@ -302,7 +302,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="w-3/4 md:w-1/3 lg:w-1/3 mx-auto">
+            <div class="w-11/12 md:w-1/3 lg:w-1/3 mx-auto">
                 <div class="flex content-center items-center py-4">
                     <h1 class="text-xl font-bold dark:text-white">Follow us on the social media</h1>
                 </div>
@@ -321,15 +321,15 @@
                     </a>
                     <a href="https://twitter.com/Fastmovies11/">
                         <i
-                            class="fa fa-twitter bg-gray-100 rounded text-3xl py-1 px-2 text-[#00acee] hover:py-1.5 hover:px-2.5 hover:opacity-90"></i>
+                            class="fa fa-twitter bg-gray-100 rounded text-3xl py-1 px-2 text-[#00acee] hover:py-1.5 hover:px-2.5 hover:opacity-90 mx-2.5"></i>
                     </a>
                     <a href="https://t.me/fastmovies11/">
                         <i
-                            class="fa fa-telegram bg-gray-100 rounded text-3xl py-1 px-2 text-[#e0cfb1] hover:py-1.5 hover:px-2.5 hover:opacity-90"></i>
+                            class="fa fa-telegram bg-gray-100 rounded text-3xl py-1 px-2 text-[#e0cfb1] hover:py-1.5 hover:px-2.5 hover:opacity-90 mx-2.5"></i>
                     </a>
                     <a href="https://instagram.com/fastmovies1/">
                         <i
-                            class="fa fa-instagram bg-gray-100 rounded text-3xl py-1 px-2 text-[#3f729b] hover:py-1.5 hover:px-2.5 hover:opacity-90"></i>
+                            class="fa fa-instagram bg-gray-100 rounded text-3xl py-1 px-2 text-[#3f729b] hover:py-1.5 hover:px-2.5 hover:opacity-90 mx-2.5"></i>
                     </a>
                     <a href="https://chat.whatsapp.com/HPXADGL6MjW2Zz7MosgQ4v">
                         <i
