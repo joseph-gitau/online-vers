@@ -160,3 +160,17 @@ setInterval(function () {
         }
     });
 }, 3000);
+
+// remove fixed class if footer is visible
+$(document).ready(function () {
+    $("#footer").bind("inview", function (event, visible) {
+        if (visible == true) {
+            // element is now visible in the viewport
+            $("#rightIndex").removeClass("fixed");
+        } else {
+            $("#rightIndex").addClass("fixed");
+            //    alert('removed... pleasecheck body');
+        }
+    });
+    $("#footer").trigger("inview");
+});
