@@ -45,10 +45,10 @@
             }
 
             /*!
-                                                                             * Load Awesome v1.1.0 (http://github.danielcardoso.net/load-awesome/)
-                                                                             * Copyright 2015 Daniel Cardoso <@DanielCardoso>
-                                                                             * Licensed under MIT
-                                                                             */
+                                                                                 * Load Awesome v1.1.0 (http://github.danielcardoso.net/load-awesome/)
+                                                                                 * Copyright 2015 Daniel Cardoso <@DanielCardoso>
+                                                                                 * Licensed under MIT
+                                                                                 */
             .la-ball-clip-rotate-multiple,
             .la-ball-clip-rotate-multiple>div {
                 position: relative;
@@ -174,8 +174,8 @@
             }
 
             /*
-                                                                             * Animation
-                                                                             */
+                                                                                 * Animation
+                                                                                 */
             @-webkit-keyframes ball-clip-rotate-multiple-rotate {
                 0% {
                     -webkit-transform: translate(-50%, -50%) rotate(0deg);
@@ -336,7 +336,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2614330797623180"
         crossorigin="anonymous"></script>
     <!--adsterra-->
-    <script type='text/javascript' src='//smilingdefectcue.com/aa/b3/e8/aab3e88ddf1b758eaba892dbb3a32ce9.js'></script>
+    {{-- <script type='text/javascript' src='//smilingdefectcue.com/aa/b3/e8/aab3e88ddf1b758eaba892dbb3a32ce9.js'></script> --}}
 
 </head>
 

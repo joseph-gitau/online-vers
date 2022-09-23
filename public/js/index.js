@@ -132,7 +132,7 @@ $(document).ready(function () {
     });
 });
 // adblocker
-setInterval(function () {
+/* setInterval(function () {
     fetch(
         "http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
     ).catch(() => {
@@ -159,7 +159,7 @@ setInterval(function () {
             };
         }
     });
-}, 3000);
+}, 3000); */
 
 // remove fixed class if footer is visible
 $(document).ready(function () {

@@ -1,6 +1,6 @@
 <div>
     {{-- The Master doesn't talk, he acts. --}}
-    <div class="flex items-center justify-center relative">
+    <div class="flex items-center justify-center relative mr-6">
         <form action="#" method="GET">
             <div class="normal-search flex">
                 <input type="text"
