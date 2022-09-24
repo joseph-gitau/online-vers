@@ -36,8 +36,16 @@ class moviesDetails extends Controller
             // downlod links
             $download_id = DB::select('select * from newfastmovies where movie_id = ?', [$movie_id]);
             $download_response = $download_id;
-            // similar
-            $movies_similar = DB::select('select * from newfastmovies order by a_id desc limit 4');
+            // similar movies
+            // get movie genre
+            $genre1 = DB::select('select genre from newfastmovies where movie_id = ' . $movie_id . '');
+            // dd($genre1);
+            // genre array to string
+            $genre = $genre1[0]->genre;
+            // dd($genre);
+            $movies_similar = DB::table('newfastmovies')->where('genre', 'like', '%' . $genre . '%')->where('movie_id', '!=', $movie_id)->orderBy('a_id', 'Desc')->limit(4)->get();
+            // $movies_similar = DB::select('select * from newfastmovies where genre like ' . $genre . ' order by a_id desc limit 4');
+            // dd($movies_similar);
             // $similar_id1 = json_decode($movies_similar, true);
             $response_similar = [];
             foreach ($movies_similar as $tm) {
