@@ -62,6 +62,10 @@ Route::get('/seriesIndex', [series::class, 'indexseries']);
 Route::get('/contact', function () {
     return view('contact');
 });
+// about
+Route::get('/about', function () {
+    return view('about');
+});
 
 
 // login pages

@@ -275,7 +275,7 @@
                     <li class="w-1/3 text-base font-bold text-500 py-1.5 hover:text-600 cursor-pointer">
                         <a href="/latest">Latest</a>
                     </li>
-                    <li class="w-1/3 text-base font-bold text-500 py-1.5 hover:text-600 cursor-pointer">
+                    <li class="w-2/3 text-base font-bold text-500 py-1.5 hover:text-600 cursor-pointer">
                         <a href="/contact">Contact us</a>
                     </li>
 
@@ -291,10 +291,13 @@
                             <a href="#">Disclaimer</a>
                         </li>
                     @endfor --}}
-                    <li class="w-1/3 text-base font-bold text-500 py-1.5 hover:text-600 cursor-pointer">
+                    <li class="w-2/3 text-base font-bold text-500 py-2 hover:text-600 cursor-pointer">
+                        <a href="/about">About us</a>
+                    </li>
+                    <li class="w-2/3 text-base font-bold text-500 py-2 hover:text-600 cursor-pointer">
                         <a href="/disclaimer">Disclaimer</a>
                     </li>
-                    <li class="w-1/3 text-base font-bold text-500 py-1.5 hover:text-600 cursor-pointer">
+                    <li class="w-2/3 text-base font-bold text-500 py-2 hover:text-600 cursor-pointer">
                         <a href="/contact">Contact us</a>
                     </li>
                     <li class="w-2/3 text-base font-bold text-500 py-1.5 hover:text-600 cursor-pointer">
