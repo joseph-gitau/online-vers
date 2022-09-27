@@ -1,17 +1,15 @@
 @section('meta')
     <meta name="description"
-        content="Index of {{ $name[3]['series'][0]->s_name }} all Seasons free download links. Release year: {{ $name[3]['series'][0]->realese_yr }}. You'll find all index of{{ $name[3]['series'][0]->s_name }} all Seasons free download links here, .mkv files for {{ $name[3]['series'][0]->s_name }} Seasons, multiple mirror links, and free download.">
-    <meta name="keywords"
-        content="{{ $name[3]['series'][0]->s_name }} all seasons,{{ $name[3]['series'][0]->s_name }} Fastmovies1">
+        content="Index of {{ $name[3]['name'] }} all Seasons free download links. Release year: {{ $name[3]['first_air_date'] }}. You'll find all index of{{ $name[3]['name'] }} all Seasons free download links here, .mkv files for {{ $name[3]['name'] }} Seasons, multiple mirror links, and free download.">
+    <meta name="keywords" content="{{ $name[3]['name'] }} all seasons,{{ $name[3]['name'] }} Fastmovies1">
 
-    <meta property="og:title" content="{{ $name[3]['series'][0]->s_name }}">
-    <meta property="og:description" content="{{ $name[3]['series'][0]->details }}">
-    <meta property="og:image" itemprop="image"
-        content="https://fastmovies1.com/seriesImages/{{ $name[3]['series'][0]->s_img }}">
-    <meta property="og:url" content="http://localhost:3000/series/{{ $name[3]['series'][0]->s_name }}">
+    <meta property="og:title" content="{{ $name[3]['name'] }}">
+    <meta property="og:description" content="{{ $name[3]['overview'] }}">
+    <meta property="og:image" itemprop="image" content="https://image.tmdb.org/t/p/w500{{ $name[3]['poster_path'] }}">
+    <meta property="og:url" content="http://fastmovies1.com/series/{{ $name[3]['init_id'] }}-{{ $name[3]['name'] }}">
 @endsection
 @section('title')
-    Index of {{ $name[3]['series'][0]->s_name }} all Seasons free download links
+    Index of {{ $name[3]['name'] }} all Seasons free download links
 @endsection
 <x-app-layout>
     {{-- loader component --}}
@@ -19,12 +17,12 @@
     {{-- loader component --}}
     <div class="container">
         <div class="w-10/12 lg:w-2/4 py-6 border-l-2 border-600 rounded ml-[10%] my-8">
-            <p class="ml-4 dark:text-white">Index of {{ $name[3]['series'][0]->s_name }} all Seasons free download
+            <p class="ml-4 dark:text-white">Index of {{ $name[3]['name'] }} all Seasons free download
                 links.
-                Release year: {{ $name[3]['series'][0]->realese_yr }}. You'll
+                Release year: {{ $name[3]['first_air_date'] }}. You'll
                 find
-                all index of {{ $name[3]['series'][0]->s_name }} Seasons free download links here, .mkv files for
-                {{ $name[3]['series'][0]->s_name }} all Seasons, multiple mirror
+                all index of {{ $name[3]['name'] }} Seasons free download links here, .mkv files for
+                {{ $name[3]['name'] }} all Seasons, multiple mirror
                 links, and free download.</p>
         </div>
         <div class="w-10/12 lg:w-10/12 content-center my-6 m-auto">
@@ -80,40 +78,48 @@
                                             echo '';
                                         } else {
                                             echo '
-                                            <div class="absolute left-0 justify-evenly top-[-35%]">
-                                                <div class=" border py-2 px-2 bg-white dark:bg-slate-600 rounded text-blue-500 hover:text-blue-700 dark:text-500 border-1-200 hover:font-bold">
-                                                    <a href="' .$p480 .'">480p</a>
-                                                </div>
-                                            </div>
-                                            ';
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            <div class="absolute left-0 justify-evenly top-[-35%]">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class=" border py-2 px-2 bg-white dark:bg-slate-600 rounded text-blue-500 hover:text-blue-700 dark:text-500 border-1-200 hover:font-bold">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <a href="' .
+                                                $p480 .
+                                                '">480p</a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            ';
                                         }
                                         $p720 = $episode->p720;
                                         if (empty($p720)) {
                                             echo '';
                                         } else {
                                             echo '
-                                            <div class="absolute left-1/3 justify-evenly top-[-35%]">
-                                                <div class=" border py-2 px-2 bg-white dark:bg-slate-600 rounded text-blue-500 hover:text-blue-700 dark:text-500 border-1-200 hover:font-bold">
-                                                    <a href="' .$p720 .'">720p</a>
-                                                </div>
-                                            </div>
-                                            ';
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            <div class="absolute left-1/3 justify-evenly top-[-35%]">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class=" border py-2 px-2 bg-white dark:bg-slate-600 rounded text-blue-500 hover:text-blue-700 dark:text-500 border-1-200 hover:font-bold">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <a href="' .
+                                                $p720 .
+                                                '">720p</a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            ';
                                         }
                                         $p1080 = $episode->p1080;
                                         if (empty($p1080)) {
                                             echo '';
                                         } else {
                                             echo '
-                                            <div class="absolute left-2/3 top-[-35%]">
-                                                <div class="border py-2 px-2 bg-white dark:bg-slate-600 rounded text-blue-500 hover:text-blue-700 dark:text-500 border-1-200 hover:font-bold">
-                                                    <a href="' .$p1080 .'">1080p</a>
-                                                </div>
-                                            </div>    
-                                            ';
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            <div class="absolute left-2/3 top-[-35%]">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="border py-2 px-2 bg-white dark:bg-slate-600 rounded text-blue-500 hover:text-blue-700 dark:text-500 border-1-200 hover:font-bold">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <a href="' .
+                                                $p1080 .
+                                                '">1080p</a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            </div>    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            ';
                                         }
                                         if (empty($p480) && empty($p720) && empty($p1080)) {
-                                            echo '<div class="border py-2 px-2 bg-white dark:bg-slate-600 rounded text-blue-500 hover:text-blue-700 dark:text-500 border-1-200 hover:font-bold"><a href="' .$episode->down_link .'">Download</a></div>
-                                            ';
+                                            echo '<div class="border py-2 px-2 bg-white dark:bg-slate-600 rounded text-blue-500 hover:text-blue-700 dark:text-500 border-1-200 hover:font-bold"><a href="' .
+                                                $episode->down_link .
+                                                '">Download</a></div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            ';
                                         } else {
                                             echo '';
                                         }
@@ -142,13 +148,13 @@
                 <div class="flex justify-between my-12 w-11/12 m-auto">
                     <div class="img ">
                         <?php
-                        $oldname = $next[0]['next'][0]->s_name;
+                        $oldname = $next[0]['name'];
                         $newname = preg_replace('/[^A-Za-z0-9\-]/', '-', $oldname);
                         ?>
-                        <a href="/series/{{ $next[0]['next'][0]->a_id }}-{{ $newname }}"
+                        <a href="/series/{{ $next[0]['init_id'] }}-{{ $newname }}"
                             class="hover:opacity-80 duration-300">
-                            <img src="/oldfastmovies1/seriesImages/{{ $next[0]['next'][0]->s_img }}"
-                                alt="{{ $next[0]['next'][0]->s_name }}"
+                            <img src="https://image.tmdb.org/t/p/w500{{ $next[0]['poster_path'] }}"
+                                alt="{{ $next[0]['name'] }}"
                                 class="w-36 lg:w-32 h-auto border rounded border-gray-400 dark:border-white">
                             <span class="justify-center text-xl dark:text-white italic">Previous</span>
 
@@ -157,13 +163,13 @@
                     <div class="img">
 
                         <?php
-                        $oldname1 = $next[1]['previous'][0]->s_name;
+                        $oldname1 = $next[1]['name'];
                         $newname1 = preg_replace('/[^A-Za-z0-9\-]/', '-', $oldname1);
                         ?>
-                        <a href="/series/{{ $next[1]['previous'][0]->a_id }}-{{ $newname1 }}"
+                        <a href="/series/{{ $next[1]['init_id'] }}-{{ $newname1 }}"
                             class="hover:opacity-80 duration-300">
-                            <img src="/oldfastmovies1/seriesImages/{{ $next[1]['previous'][0]->s_img }}"
-                                alt="{{ $next[1]['previous'][0]->s_name }}"
+                            <img src="https://image.tmdb.org/t/p/w500{{ $next[1]['poster_path'] }}"
+                                alt="{{ $next[1]['name'] }}"
                                 class="w-36 lg:w-32 h-auto border rounded border-gray-400 dark:border-white">
                             <span class="justify-center text-xl dark:text-white italic">Next</span>
                         </a>
@@ -176,15 +182,15 @@
                         <h1 class="dark:text-white text-2xl underline">Latest series</h1>
                     </div>
                     <div class="flex flex-wrap">
-                        @foreach ($next[2]['latest'] as $latest)
+                        @foreach ($next[2] as $latest)
                             <?php
-                            $oldname2 = $latest->s_name;
+                            $oldname2 = $latest['name'];
                             $newname2 = preg_replace('/[^A-Za-z0-9\-]/', '-', $oldname2);
                             ?>
-                            <a href="/series/{{ $latest->a_id }}-{{ $newname2 }}"
+                            <a href="/series/{{ $latest['init_id'] }}-{{ $newname2 }}"
                                 class="w-2/4 lg:w-1/4 m-auto hover:opacity-80 duration-300">
-                                <img src="/oldfastmovies1/seriesImages/{{ $latest->s_img }}"
-                                    alt="{{ $latest->s_name }}"
+                                <img src="https://image.tmdb.org/t/p/w500{{ $latest['poster_path'] }}"
+                                    alt="{{ $latest['name'] }}"
                                     class="w-52 m-auto my-4 lg:w-48 lg:min-w-full h-52 min-h-fit border rounded border-gray-400 dark:border-white">
                             </a>
                             {{-- {{ $latest->s_name }} --}}

@@ -50,9 +50,9 @@
             $password = '';
             $dbname = 'fastmovi_epiz_28351378_fastMovies_local';
             /* $server = "31.22.4.240";
-                                                            $username = "fastmovi_burt";
-                                                            $password = "zy;?f9lDgBUM";
-                                                            $dbname = "fastmovi_epiz_28351378_fastMovies"; */
+                                                                                                                                                                                                                                                                                                                                                                                    $username = "fastmovi_burt";
+                                                                                                                                                                                                                                                                                                                                                                                    $password = "zy;?f9lDgBUM";
+                                                                                                                                                                                                                                                                                                                                                                                    $dbname = "fastmovi_epiz_28351378_fastMovies"; */
             
             $conn = mysqli_connect($server, $username, $password, $dbname);
             $sql = "SELECT * FROM newfastmovies WHERE movie_id = $sid";
@@ -116,21 +116,25 @@
         <?php $tser = 0; ?>
         @foreach ($seriesraw[0] as $serie)
             <?php
-            $oldname = $serie->s_name;
-            $newname = preg_replace('/[^A-Za-z0-9\-]/', '-', $oldname);
+            $oldname2 = $serie['name'];
+            $newname2 = preg_replace('/[^A-Za-z0-9\-]/', '-', $oldname2);
             ?>
             <div class="relative w-36 md:w-52 lg:w-56 group m-auto mb-6">
-                <img src="/oldfastmovies1/seriesImages/{{ $serie->s_img }}" alt="{{ $serie->s_name }}"
+                <img src="https://image.tmdb.org/t/p/w500{{ $serie['poster_path'] }}" alt="{{ $serie['name'] }}"
                     class="w-36 md:w-48 lg:w-48 h-auto md:h-60 lg:h-64 m-auto border-2 border-black dark:border-white rounded group-hover:opacity-60 group-hover:cursor-pointer duration-300">
                 <span
-                    class="absolute top-[15%] left-[18%] text-2xl font-bold text-white hidden group-hover:block duration-500">{{ $serie->genre }}</span>
-                <a href="/series/{{ $serie->a_id }}-{{ $newname }}">
+                    class="absolute top-[15%] left-[18%] text-2xl font-bold text-white hidden group-hover:block duration-500">
+                    @foreach ($serie['genres'] as $genre)
+                        {{ $genre['name'] }},
+                    @endforeach
+                </span>
+                <a href="/series/{{ $serie['init_id'] }}-{{ $newname2 }}">
                     <button
                         class="border rounded-3xl py-2 px-4 bg-600 text-base text-white absolute top-2/4 left-[20%] hidden group-hover:block duration-500">View
                         details</button>
                 </a>
-                <h2 class="text-black dark:text-white text-base font-bold ml-2 truncate">{{ $serie->s_name }}</h2>
-                <span class="text-gray-900 dark:text-white text-sm ml-6">{{ $serie->realese_yr }}</span>
+                <h2 class="text-black dark:text-white text-base font-bold ml-2 truncate">{{ $serie['name'] }}</h2>
+                <span class="text-gray-900 dark:text-white text-sm ml-6">{{ $serie['first_air_date'] }}</span>
 
             </div>
         @endforeach

@@ -20,24 +20,24 @@ print_r($series); */
         break;
     }
     // old movie id
-    $sid = $movie['id'];
-    $server = "31.22.4.240";
-    $username = "fastmovi_burt";
-    $password = "zy;?f9lDgBUM";
-    $dbname = "fastmovi_epiz_28351378_fastMovies";
-    
-    $conn = mysqli_connect($server, $username, $password, $dbname);
-    $sql = "SELECT * FROM newfastmovies WHERE movie_id = $sid";
-    $result = $conn->query($sql);
-    while ($row = mysqli_fetch_assoc($result)) {
-        $link = $row['a_id'];
-    }
+    /* $sid = $movie['id'];
+        $server = "31.22.4.240";
+        $username = "fastmovi_burt";
+        $password = "zy;?f9lDgBUM";
+        $dbname = "fastmovi_epiz_28351378_fastMovies";
+        
+        $conn = mysqli_connect($server, $username, $password, $dbname);
+        $sql = "SELECT * FROM newfastmovies WHERE movie_id = $sid";
+        $result = $conn->query($sql);
+        while ($row = mysqli_fetch_assoc($result)) {
+            $link = $row['a_id'];
+        } */
     $oldname = $movie['title'];
     $newname = preg_replace('/[^A-Za-z0-9\-]/', '-', $oldname);
     ?>
     {{-- <br />
     <h4>MOVIE++{{ $movie->movie_name }}</h4> --}}
-    <a href="/movies/{{ $link }}-{{ $newname }}">
+    <a href="/movies/{{ $movie['init_id'] }}-{{ $newname }}">
         <div class="w-36 my-4 h-38">
             <div class="w-10/12 m-auto h-32">
                 <img src="https://image.tmdb.org/t/p/w500{{ $movie['poster_path'] }}" alt="{{ $movie['title'] }}"
@@ -53,17 +53,17 @@ print_r($series); */
         break;
     }
     // filterd name
-    $oldname1 = $serie->s_name;
+    $oldname1 = $serie['name'];
     $newname1 = preg_replace('/[^A-Za-z0-9\-]/', '-', $oldname1);
     ?>
     {{-- <br />
     <h4>SERIE+++{{ $serie->s_name }}</h4> --}}
-    <a href="/series/{{ $serie->a_id }}-{{ $newname1 }}">
+    <a href="/series/{{ $serie['init_id'] }}-{{ $newname1 }}">
         <div class="w-36 my-4 h-38">
             <div class="w-10/12 m-auto h-32">
-                <img src="/assets/series/seriesImages/{{ $serie->s_img }}" alt="{{ $serie->s_name }}"
+                <img src="https://image.tmdb.org/t/p/w500{{ $serie['poster_path'] }}" alt="{{ $serie['name'] }}"
                     class="w-9/12 m-auto h-28 border rounded ">
-                <h2 class="dark:text-white class">{{ $serie->s_name }}</h2>
+                <h2 class="dark:text-white class">{{ $serie['name'] }}</h2>
             </div>
         </div>
     </a>

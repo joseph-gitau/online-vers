@@ -1789,6 +1789,9 @@ input[type="range"]::-ms-fill-lower {
 .w-2\/3 {
   width: 66.666667%;
 }
+.w-40 {
+  width: 10rem;
+}
 .w-14 {
   width: 3.5rem;
 }
@@ -1797,9 +1800,6 @@ input[type="range"]::-ms-fill-lower {
 }
 .w-\[45\%\] {
   width: 45%;
-}
-.w-40 {
-  width: 10rem;
 }
 .w-11 {
   width: 2.75rem;
@@ -3452,12 +3452,12 @@ input[type="range"]::-ms-fill-lower {
     width: 13rem;
   }
 
-  .md\:w-56 {
-    width: 14rem;
-  }
-
   .md\:w-10\/12 {
     width: 83.333333%;
+  }
+
+  .md\:w-56 {
+    width: 14rem;
   }
 
   .md\:w-4\/5 {

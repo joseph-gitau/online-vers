@@ -19,7 +19,7 @@ class home extends Controller
         /* Cache::forget('cachekey');
         Cache::forget('seriesCache');
         Cache::forget('upcomingCache'); Cache::has('upcomingCache') and*/
-        
+
         if (Cache::has('seriesCache') && Cache::has('cachekey')) {
             $jsonData1 = Cache::get('cachekey');
             $series1 = Cache::get('seriesCache');
@@ -27,10 +27,23 @@ class home extends Controller
         } else {
             // api large Container
             $apiContent = [];
-            $series = DB::select('select * from series order by a_id desc limit 8');
+            $apiSeries = [];
+            $series = DB::select('select * from newSeries order by id desc limit 8');
+            foreach ($series as $ser) {
+                $old_id = $ser->a_id;
+                $s_id = $ser->tmdb_id;
+                $key = "3c2fd11dc93ee3dfdcf927cc73990153";
+                $s_response = Http::get("https://api.themoviedb.org/3/$s_id?api_key=$key&language=en-US");
+                // dd($s_response);
+                $dec_response1 = json_decode($s_response, true);
+                $dec_response = array_merge($dec_response1, array("init_id" => $old_id));
+                $apiSeries[] = $dec_response;
+            }
+            $apiContent[] = $apiSeries;
+            // dd($apiContent);
             // $seriesJson = json_decode($series, true);
             // series
-            $apiContent[] = $series;
+            // $apiContent[] = $series;
             $users = DB::select('select * from newfastmovies order by a_id desc limit 8 ');
 
             $jsonData = [];
@@ -130,7 +143,7 @@ class home extends Controller
             $mcat19['western'] = $mcat_western;
             array_push($catt, $mcat19);
             // end of movies category
-            
+
             // upcoming
             $upcoming = Http::get("https://api.themoviedb.org/3/movie/upcoming?api_key=3c2fd11dc93ee3dfdcf927cc73990153&language=en-US&page=1");
             $upcomingJson = $upcoming->json();
@@ -139,10 +152,11 @@ class home extends Controller
             $apiContent[] = $catt;
 
 
-            
+
             // nw
             Cache::put('cachekey', $jsonData, 1440);
             Cache::put('seriesCache', $apiContent, 1440);
+            Cache::put('serieApi', $apiSeries, 1440);
             // Cache::put('upcomingCache', $upcomingJson, 1);
             $jsonData1 = Cache::get('cachekey');
             $series1 = Cache::get('seriesCache');
