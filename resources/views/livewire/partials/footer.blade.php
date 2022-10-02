@@ -127,116 +127,116 @@
     
     $scatt = [];
     // action category
-    $scat_action = DB::table('series')
+    $scat_action = DB::table('newSeries')
         ->where('genre', 'like', '%' . 'action' . '%')
         ->count();
     $scat1['action'] = $scat_action;
     array_push($scatt, $scat1);
     // adventure category
-    $scat_adventure = DB::table('series')
+    $scat_adventure = DB::table('newSeries')
         ->where('genre', 'like', '%' . 'adventure' . '%')
         ->count();
     $scat2['adventure'] = $scat_adventure;
     array_push($scatt, $scat2);
     // animation category
-    $scat_animation = DB::table('series')
+    $scat_animation = DB::table('newSeries')
         ->where('genre', 'like', '%' . 'animation' . '%')
         ->count();
     $scat3['animation'] = $scat_animation;
     array_push($scatt, $scat3);
     // comedy category
-    $scat_comedy = DB::table('series')
+    $scat_comedy = DB::table('newSeries')
         ->where('genre', 'like', '%' . 'comedy' . '%')
         ->count();
     $scat4['comedy'] = $scat_comedy;
     array_push($scatt, $scat4);
     // crime category
-    $scat_crime = DB::table('series')
+    $scat_crime = DB::table('newSeries')
         ->where('genre', 'like', '%' . 'crime' . '%')
         ->count();
     $scat5['crime'] = $scat_crime;
     array_push($scatt, $scat5);
     // documentary category
-    $scat_documentary = DB::table('series')
+    $scat_documentary = DB::table('newSeries')
         ->where('genre', 'like', '%' . 'documentary' . '%')
         ->count();
     $scat6['documentary'] = $scat_documentary;
     array_push($scatt, $scat6);
     // drama category
-    $scat_drama = DB::table('series')
+    $scat_drama = DB::table('newSeries')
         ->where('genre', 'like', '%' . 'drama' . '%')
         ->count();
     $scat7['drama'] = $scat_drama;
     array_push($scatt, $scat7);
     // family category
-    $scat_family = DB::table('series')
+    $scat_family = DB::table('newSeries')
         ->where('genre', 'like', '%' . 'family' . '%')
         ->count();
     $scat8['family'] = $scat_family;
     array_push($scatt, $scat8);
     // kids category
-    $scat_kids = DB::table('series')
+    $scat_kids = DB::table('newSeries')
         ->where('genre', 'like', '%' . 'kids' . '%')
         ->count();
     $scat9['kids'] = $scat_kids;
     array_push($scatt, $scat9);
     // mystery category
-    $scat_mystery = DB::table('series')
+    $scat_mystery = DB::table('newSeries')
         ->where('genre', 'like', '%' . 'mystery' . '%')
         ->count();
     $scat10['mystery'] = $scat_mystery;
     array_push($scatt, $scat10);
     // news category
-    $scat_news = DB::table('series')
+    $scat_news = DB::table('newSeries')
         ->where('genre', 'like', '%' . 'news' . '%')
         ->count();
     $scat11['news'] = $scat_news;
     array_push($scatt, $scat11);
     // reality category
-    $scat_reality = DB::table('series')
+    $scat_reality = DB::table('newSeries')
         ->where('genre', 'like', '%' . 'reality' . '%')
         ->count();
     $scat12['reality'] = $scat_reality;
     array_push($scatt, $scat12);
     // scifi category
-    $scat_scifi = DB::table('series')
+    $scat_scifi = DB::table('newSeries')
         ->where('genre', 'like', '%' . 'science fiction' . '%')
         ->orWhere('genre', 'like', '%' . 'sci-fi' . '%')
         ->count();
     $scat13['scifi'] = $scat_scifi;
     array_push($scatt, $scat13);
     // fantasy category
-    $scat_fantasy = DB::table('series')
+    $scat_fantasy = DB::table('newSeries')
         ->where('genre', 'like', '%' . 'fantasy' . '%')
         ->count();
     $scat14['fantasy'] = $scat_fantasy;
     array_push($scatt, $scat14);
     // soap category
-    $scat_soap = DB::table('series')
+    $scat_soap = DB::table('newSeries')
         ->where('genre', 'like', '%' . 'soap' . '%')
         ->count();
     $scat15['soap'] = $scat_soap;
     array_push($scatt, $scat15);
     // talk category
-    $scat_talk = DB::table('series')
+    $scat_talk = DB::table('newSeries')
         ->where('genre', 'like', '%' . 'talk' . '%')
         ->count();
     $scat16['talk'] = $scat_talk;
     array_push($scatt, $scat16);
     // war category
-    $scat_war = DB::table('series')
+    $scat_war = DB::table('newSeries')
         ->where('genre', 'like', '%' . 'war' . '%')
         ->count();
     $scat17['war'] = $scat_war;
     array_push($scatt, $scat17);
     // western category
-    $scat_western = DB::table('series')
+    $scat_western = DB::table('newSeries')
         ->where('genre', 'like', '%' . 'western' . '%')
         ->count();
     $scat18['western'] = $scat_western;
     array_push($scatt, $scat18);
     // politics category
-    $scat_politics = DB::table('series')
+    $scat_politics = DB::table('newSeries')
         ->where('genre', 'like', '%' . 'politics' . '%')
         ->count();
     $scat19['politics'] = $scat_politics;
@@ -458,38 +458,38 @@
                             href="/series/category/Mystery" class="hover:text-500 duration-500">Mystery
                             ({{ $scatt[9]['mystery'] }}) </a></li>
                     <li class="border-2 py-2 px-3 border-white mx-2 my-3 dark:text-white"><a
-                            href="/movies/category/News" class="hover:text-500 duration-500">News
+                            href="/series/category/News" class="hover:text-500 duration-500">News
                             ({{ $scatt[10]['news'] }}) </a></li>
                     <li class="border-2 py-2 px-3 border-white mx-2 my-3 dark:text-white"><a
-                            href="/movies/category/Reality" class="hover:text-500 duration-500">Reality
+                            href="/series/category/Reality" class="hover:text-500 duration-500">Reality
                             ({{ $scatt[11]['reality'] }}) </a></li>
                     {{-- sci fi --}}
                     <li class="border-2 py-2 px-3 border-white mx-2 my-3 dark:text-white"><a
-                            href="/movies/category/Sci-fi" class="hover:text-500 duration-500">Sci-Fi
+                            href="/series/category/Sci-fi" class="hover:text-500 duration-500">Sci-Fi
                             ({{ $scatt[12]['scifi'] }}) </a></li>
                     {{-- fantasy --}}
                     <li class="border-2 py-2 px-3 border-white mx-2 my-3 dark:text-white"><a
-                            href="/movies/category/Fantasy" class="hover:text-500 duration-500">Fantasy
+                            href="/series/category/Fantasy" class="hover:text-500 duration-500">Fantasy
                             ({{ $scatt[13]['fantasy'] }}) </a></li>
                     {{-- soap --}}
                     <li class="border-2 py-2 px-3 border-white mx-2 my-3 dark:text-white"><a
-                            href="/movies/category/Soap" class="hover:text-500 duration-500">Soap
+                            href="/series/category/Soap" class="hover:text-500 duration-500">Soap
                             ({{ $scatt[14]['soap'] }}) </a></li>
                     {{-- talk --}}
                     <li class="border-2 py-2 px-3 border-white mx-2 my-3 dark:text-white"><a
-                            href="/movies/category/Talk" class="hover:text-500 duration-500">Talk
+                            href="/series/category/Talk" class="hover:text-500 duration-500">Talk
                             ({{ $scatt[15]['talk'] }}) </a></li>
                     {{-- war --}}
                     <li class="border-2 py-2 px-3 border-white mx-2 my-3 dark:text-white"><a
-                            href="/movies/category/War" class="hover:text-500 duration-500">War
+                            href="/series/category/War" class="hover:text-500 duration-500">War
                             ({{ $scatt[16]['war'] }}) </a></li>
                     {{-- western --}}
                     <li class="border-2 py-2 px-3 border-white mx-2 my-3 dark:text-white"><a
-                            href="/movies/category/Western" class="hover:text-500 duration-500">Western
+                            href="/series/category/Western" class="hover:text-500 duration-500">Western
                             ({{ $scatt[17]['western'] }}) </a></li>
                     {{-- politics --}}
                     <li class="border-2 py-2 px-3 border-white mx-2 my-3 dark:text-white"><a
-                            href="/movies/category/Politics" class="hover:text-500 duration-500">Politics
+                            href="/series/category/Politics" class="hover:text-500 duration-500">Politics
                             ({{ $scatt[18]['politics'] }}) </a></li>
                     {{-- end --}}
 

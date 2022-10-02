@@ -129,7 +129,7 @@ $(document).ready(function () {
             });
         } else {
             resultDropdown.empty();
-        } 
+        }
     });
     // setInterval(function(){
     //     fetch('https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js').catch(() => {
@@ -148,8 +148,7 @@ $(document).ready(function () {
     //         		<a href="">Okay</a>
     //         	`;
     //         	document.body.appendChild(adp);
-        	
-        	
+
     //         	adp.querySelector('a').onclick = e => {
     //         		e.preventDefault();
     //         		document.body.removeChild(adp_underlay);
@@ -158,6 +157,17 @@ $(document).ready(function () {
     //         }
     //     });
     // }, 2000);
-    
 });
 
+// show category on hover
+$(document).ready(function () {
+    $("#category").hover(
+        function () {
+            console.log("hover");
+            $(".categoryms").removeClass("hidden");
+        },
+        function () {
+            $(".categoryms").addClass("hidden");
+        }
+    );
+});

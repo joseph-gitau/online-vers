@@ -174,3 +174,35 @@ $(document).ready(function () {
     });
     $("#footer").trigger("inview");
 });
+
+// show category on hover
+$(document).ready(function () {
+    $(".category").hover(
+        function () {
+            $(".categoryms").fadeIn();
+        },
+        function () {
+            $(".categoryms").fadeOut();
+        }
+    );
+});
+/* $(document).ready(function () {
+    $("#category").hover(
+        function () {
+            console.log("hover");
+            $(".categoryms").removeClass("hidden");
+        },
+        function () {
+            $(".categoryms").addClass("hidden");
+        }
+    );
+    $(".categoryms").hover(
+        function () {
+            console.log("hover");
+            $(".categoryms").removeClass("hidden");
+        },
+        function () {
+            $(".categoryms").addClass("hidden");
+        }
+    );
+}); */

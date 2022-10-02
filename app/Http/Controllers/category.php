@@ -57,18 +57,36 @@ class category extends Controller
     // series controller
     public function series($id)
     {
+        // tester (Cache::has('series' . $cache_id) && Cache::has('series_type' . $cache_id))
+        $api_key = "3c2fd11dc93ee3dfdcf927cc73990153";
         $cache_id = URL::full();
-        if (Cache::has('series' . $cache_id) && Cache::has('series_type' . $cache_id)) {
+        if (5 < 3) {
             $serie = Cache::get('series' . $cache_id);
             $send_id = Cache::get('series_type' . $cache_id);
         } else {
+            $wrap = [];
+            $all = [];
             // select all series from db where category is $id
-            $serie1 = DB::table('series')->where('genre', 'like', '%' . $id . '%')->orderBy('a_id', 'Desc')->paginate(20);
+            $serie1 = DB::table('newSeries')->where('genre', 'like', '%' . $id . '%')->orderBy('a_id', 'Desc')->paginate(20);
+
+            foreach ($serie1 as $key => $value) {
+                $sid = $value->tmdb_id;
+                $old_id = $value->a_id;
+                $s_response = Http::get("https://api.themoviedb.org/3/$sid?api_key=$api_key&language=en-US");
+                $dec_response1 = json_decode($s_response, true);
+                $dec_response = array_merge($dec_response1, array("init_id" => $old_id));
+                $all[] = $dec_response;
+            }
+            // dd($all);
+            $wrap[] = $serie1;
+            $wrap[] = $all;
+            $wrap[] = "test";
+            // dd($wrap);
             // serie type
             $send_id1 = $id;
             // dd($serie);
             // put in cache
-            Cache::put('series' . $cache_id, $serie1, 1440);
+            Cache::put('series' . $cache_id, $wrap, 1440);
             Cache::put('series_type' . $cache_id, $send_id1, 1440);
             // get cache
             $serie = Cache::get('series' . $cache_id);

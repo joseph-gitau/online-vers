@@ -437,6 +437,11 @@
 
         </div>
     </nav>
+    {{-- nav2 --}}
+    <livewire:add-header />
+    {{-- nav2 --}}
+
+
     {{-- <div wire:loading>
         <livewire:loader />
     </div> --}}
