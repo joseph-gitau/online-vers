@@ -37,6 +37,7 @@ module.exports = {
         require("@tailwindcss/forms"),
         require("@tailwindcss/typography"),
         require("flowbite/plugin"),
+        require("tailwind-scrollbar")({ nocompatible: true }),
         require("tailwindcss-plugins/pagination")({
             /* Customizations here... */
             pagination: (theme) => ({
@@ -55,4 +56,7 @@ module.exports = {
             }),
         }),
     ],
+    variants: {
+        scrollbar: ["rounded"],
+    },
 };
