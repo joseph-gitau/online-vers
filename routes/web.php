@@ -28,6 +28,8 @@ Route::get('/home', function () {
     return view('home');
 }); */
 
+// test route
+Route::get('/test/{id}', [search::class, 'index']);
 
 Route::get('/user/{id}', [UserController::class, 'show']);
 Route::get('/', [home::class, 'index']);

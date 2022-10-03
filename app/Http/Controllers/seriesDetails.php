@@ -16,8 +16,9 @@ class seriesDetails extends Controller
         $users = DB::table('newSeries')->where('a_id', $id)->get();
         $s_id = $users[0]->tmdb_id;
         $old_id = $users[0]->a_id;
-        $s_response = Http::get("https://api.themoviedb.org/3/$s_id?api_key=$key&language=en-US");
+        $s_response = Http::get("https://api.themoviedb.org/3/$s_id?api_key=$key&append_to_response=credits,images&language=en-US");
         $dec_response1 = json_decode($s_response, true);
+        // dd($dec_response1);
         $dec_response = array_merge($dec_response1, array("init_id" => $old_id));
         // dd($dec_response1);
         $genre = $users[0]->genre;

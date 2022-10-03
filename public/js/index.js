@@ -109,26 +109,34 @@ $(window).on("load", function () {
 });
 // search
 $(document).ready(function () {
+    var timeout = null;
+    $("#loadergif").delay(2000).fadeOut("slow");
     $('.normal-search input[type="text"]').on("keyup input", function () {
-        /* Get input value on change */
-        var inputVal = $(this).val();
-        console.log(inputVal);
-        var resultDropdown = $(".results");
-        // console.log(resultDropdown);
-        if (inputVal.length) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => {
             $(".loader-se").show();
-            $.get("/search/" + inputVal, {
-                // term: inputVal,
-            }).done(function (data) {
-                // Display the returned data in browser
-                resultDropdown.html(data);
-                if (resultDropdown.length > 0) {
-                    $(".loader-se").hide();
-                }
-            });
-        } else {
-            resultDropdown.empty();
-        }
+            /* Get input value on change */
+            var inputVal = $(this).val();
+            // console.log(inputVal);
+            var resultDropdown = $(".results");
+            // console.log(resultDropdown);
+            if (inputVal.length) {
+                // $(".loader-se").show();
+                $.get("/search/" + inputVal, {
+                    // term: inputVal,
+                }).done(function (data) {
+                    // Display the returned data in browser
+                    resultDropdown.html(data);
+                    if (resultDropdown.length > 0) {
+                        $(".loader-se").hide();
+                    } else {
+                        $(".loader-se").hide();
+                    }
+                });
+            } else {
+                resultDropdown.empty();
+            }
+        }, 1000);
     });
 });
 // adblocker

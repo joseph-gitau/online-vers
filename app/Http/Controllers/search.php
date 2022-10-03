@@ -11,6 +11,11 @@ class search extends Controller
 {
     public function index($id)
     {
+        // save search term to db
+        DB::table('search_terms')->insert([
+            'name' => $id,
+            'type' => "Search"
+        ]);
         $key = "3c2fd11dc93ee3dfdcf927cc73990153";
         $all = [];
         $movies = DB::table('newfastmovies')->where('movie_name', 'like', '%' . $id . '%')->limit(8)->get();
@@ -26,7 +31,7 @@ class search extends Controller
         }
         // $all[] = $movies;
 
-        $series = [];
+        $seriesall = [];
         $series = DB::table('newSeries')->where('s_name', 'like', '%' . $id . '%')->get();
         foreach ($series as $ser) {
             $ser_id = $ser->tmdb_id;
@@ -34,12 +39,12 @@ class search extends Controller
             $ser_response = Http::get("https://api.themoviedb.org/3/$ser_id?api_key=$key&language=en-US");
             $dec_response1 = json_decode($ser_response, true);
             $dec_response = array_merge($dec_response1, array("init_id" => $old_id));
-            $series[] = $dec_response;
+            $seriesall[] = $dec_response;
         }
         // $all[] = $series;
         // dd($all);
-        // dd($series);
-        return view('search', ['movies' => $all], ['series' => $series]);
+        // dd($seriesall);
+        return view('search', ['movies' => $all], ['series' => $seriesall]);
     }
     public function result($id)
     {

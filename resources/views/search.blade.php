@@ -21,17 +21,17 @@ print_r($series); */
     }
     // old movie id
     /* $sid = $movie['id'];
-        $server = "31.22.4.240";
-        $username = "fastmovi_burt";
-        $password = "zy;?f9lDgBUM";
-        $dbname = "fastmovi_epiz_28351378_fastMovies";
-        
-        $conn = mysqli_connect($server, $username, $password, $dbname);
-        $sql = "SELECT * FROM newfastmovies WHERE movie_id = $sid";
-        $result = $conn->query($sql);
-        while ($row = mysqli_fetch_assoc($result)) {
-            $link = $row['a_id'];
-        } */
+                    $server = "31.22.4.240";
+                    $username = "fastmovi_burt";
+                    $password = "zy;?f9lDgBUM";
+                    $dbname = "fastmovi_epiz_28351378_fastMovies";
+                    
+                    $conn = mysqli_connect($server, $username, $password, $dbname);
+                    $sql = "SELECT * FROM newfastmovies WHERE movie_id = $sid";
+                    $result = $conn->query($sql);
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $link = $row['a_id'];
+                    } */
     $oldname = $movie['title'];
     $newname = preg_replace('/[^A-Za-z0-9\-]/', '-', $oldname);
     ?>
@@ -69,3 +69,8 @@ print_r($series); */
     </a>
     <?php $i++; ?>
 @endforeach
+<?php
+if ($movies == null && $series == null) {
+    echo '<h1 class="w-full p-6 dark:text-white text-base">No results found! check your spelling and try again.</h1>';
+}
+?>

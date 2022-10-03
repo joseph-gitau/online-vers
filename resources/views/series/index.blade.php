@@ -122,6 +122,28 @@
                     @endforeach
                 </div>
             </div>
+            {{-- nw actors --}}
+            <div class="w-11/12 m-auto">
+                <h1 class="text-bold text-gray-800 text-2xl my-4 underline dark:text-white">Cast</h1>
+                <div class="flex flex-wrap">
+                    @foreach ($name['credits']['cast'] as $credit => $cre)
+                        <?php
+                        if ($credit == 5) {
+                            break;
+                        }
+                        ?>
+                        <div class="w-[45%] sm:w-1/3 md:w-1/3 lg:w-1/5 mx-auto mb-6">
+                            <img src="https://image.tmdb.org/t/p/w300{{ $cre['profile_path'] }}"
+                                alt="{{ $cre['character'] }}"
+                                class="w-36 lg:w-50 h-auto border-2 border-black dark:border-white rounded hover:opacity-60 hover:cursor-pointer duration-300">
+                            <h2 class="dark:text-white">{{ $cre['name'] }}</h2>
+                            <h3><span class="text-sm italic dark:text-gray-400">as </span>
+                                <br> <span class="dark:text-white">{{ $cre['character'] }}</span>
+                            </h3>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
         </div>
     </div>
 </x-app-layout>
