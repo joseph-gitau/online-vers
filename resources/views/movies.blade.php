@@ -51,9 +51,9 @@
                     $sid = $data['id'];
                     // $conn = new mysqli('31.22.4.240', 'fastmovi_burt', 'zy;?f9lDgBUM', 'fastmovi_epiz_28351378_fastMovies');
                     /* $server = '31.22.4.240';
-                                                                                                    $username = 'fastmovi_burt';
-                                                                                                    $password = 'zy;?f9lDgBUM';
-                                                                                                    $dbname = 'fastmovi_epiz_28351378_fastMovies'; */
+                                                                                                                                                                                                                                                                                                                                                                                                                $username = 'fastmovi_burt';
+                                                                                                                                                                                                                                                                                                                                                                                                                $password = 'zy;?f9lDgBUM';
+                                                                                                                                                                                                                                                                                                                                                                                                                $dbname = 'fastmovi_epiz_28351378_fastMovies'; */
                     $server = 'localhost';
                     $username = 'root';
                     $password = '';
@@ -68,18 +68,18 @@
                     
                     ?>
                     {{-- cards --}}
-                    <div class="relative w-36 md:w-52 lg:w-56 group my-4 m-auto">
+                    <div class="relative w-36 md:w-52 lg:w-56 group my-4 m-auto" data-aos="zoom-in-up">
                         <img src="https://image.tmdb.org/t/p/w500{{ $data['poster_path'] }}" alt="{{ $data['title'] }}"
                             class="w-48 md:w-48 lg:w-48 h-auto md:h-60 lg:h-64 m-auto border-2 border-black dark:border-white rounded group-hover:opacity-60 group-hover:cursor-pointer duration-300">
                         <span
-                            class="absolute top-[15%] left-[15%] text-2xl font-bold text-white hidden group-hover:block duration-500">
+                            class="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/4 text-2xl font-bold text-white hidden group-hover:block duration-500">
                             @foreach ($data['genres'] as $genre)
                                 {{ $genre['name'] }},
                             @endforeach
                         </span>
                         <a href="/movies/{{ $link }}-{{ $newname }}">
                             <button
-                                class="border rounded-3xl py-1 px-2 md:py-2 lg:py-2 md:px-4 lg:px-4 bg-600 text-base text-white dark:text-white absolute top-2/4 left-[15%] hidden group-hover:block duration-500">View
+                                class="w-32 border rounded-3xl py-1 px-2 md:py-2 lg:py-2 md:px-4 lg:px-4 bg-600 text-base text-white dark:text-white absolute top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-2/3 hidden group-hover:block duration-500">View
                                 details</button>
                         </a>
                         <h2 class="text-black dark:text-white text-base font-bold ml-6">{{ $data['title'] }}</h2>

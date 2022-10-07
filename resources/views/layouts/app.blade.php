@@ -24,6 +24,8 @@
     {{-- <link rel="stylesheet" href="/assets/fontawesome-free-5.15.3-web/css/all.min.css"> --}}
     <!-- Styles -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}?v=<?php echo rand(); ?>">
+    {{-- aos --}}
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     {{-- yield links css --}}
     @yield('links')
 
@@ -45,10 +47,10 @@
             }
 
             /*!
-                                                                                 * Load Awesome v1.1.0 (http://github.danielcardoso.net/load-awesome/)
-                                                                                 * Copyright 2015 Daniel Cardoso <@DanielCardoso>
-                                                                                 * Licensed under MIT
-                                                                                 */
+                                                                                                 * Load Awesome v1.1.0 (http://github.danielcardoso.net/load-awesome/)
+                                                                                                 * Copyright 2015 Daniel Cardoso <@DanielCardoso>
+                                                                                                 * Licensed under MIT
+                                                                                                 */
             .la-ball-clip-rotate-multiple,
             .la-ball-clip-rotate-multiple>div {
                 position: relative;
@@ -174,8 +176,8 @@
             }
 
             /*
-                                                                                 * Animation
-                                                                                 */
+                                                                                                 * Animation
+                                                                                                 */
             @-webkit-keyframes ball-clip-rotate-multiple-rotate {
                 0% {
                     -webkit-transform: translate(-50%, -50%) rotate(0deg);
@@ -319,6 +321,8 @@
     <script src="{{ asset('js/jquery.js') }}"></script>
     {{-- user script --}}
     <script src="{{ asset('js/index.js') }}?v=<?php echo rand(); ?>"></script>
+    {{-- aos --}}
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     {{-- additional page specific requirements --}}
     @yield('scripts')
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -340,7 +344,7 @@
 
 </head>
 
-<body class="font-sans antialiased overflow-x-hidden dark:bg-slate-900">
+<body class="font-sans antialiased overflow-x-hidden dark:bg-slate-900 dark:text-white">
 
     {{-- loader --}}
     <div id="loadergif" class="">
@@ -376,7 +380,9 @@
 
     @stack('modals')
 
-
+    <script>
+        AOS.init();
+    </script>
     @livewireScripts
     @stack('scripts')
     <livewire:partials.footer />

@@ -1414,6 +1414,21 @@ input[type="range"]::-ms-fill-lower {
 .left-2\/3 {
   left: 66.666667%;
 }
+.top-1\/2 {
+  top: 50%;
+}
+.left-1\/2 {
+  left: 50%;
+}
+.top-1\/4 {
+  top: 25%;
+}
+.top-3\/4 {
+  top: 75%;
+}
+.top-2\/3 {
+  top: 66.666667%;
+}
 .z-0 {
   z-index: 0;
 }
@@ -1696,9 +1711,6 @@ input[type="range"]::-ms-fill-lower {
 .h-\[40\%\] {
   height: 40%;
 }
-.h-64 {
-  height: 16rem;
-}
 .h-28 {
   height: 7rem;
 }
@@ -1717,8 +1729,14 @@ input[type="range"]::-ms-fill-lower {
 .h-full {
   height: 100%;
 }
+.h-64 {
+  height: 16rem;
+}
 .h-36 {
   height: 9rem;
+}
+.h-96 {
+  height: 24rem;
 }
 .max-h-\[70vh\] {
   max-height: 70vh;
@@ -1836,11 +1854,23 @@ input[type="range"]::-ms-fill-lower {
 .w-11 {
   width: 2.75rem;
 }
+.w-3\/12 {
+  width: 25%;
+}
 .w-24 {
   width: 6rem;
 }
 .w-1\/4 {
   width: 25%;
+}
+.w-64 {
+  width: 16rem;
+}
+.w-7\/12 {
+  width: 58.333333%;
+}
+.w-32 {
+  width: 8rem;
 }
 .min-w-0 {
   min-width: 0px;
@@ -1889,6 +1919,34 @@ input[type="range"]::-ms-fill-lower {
   --tw-translate-y: 0px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+.-translate-x-1\/2 {
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.-translate-y-1\/2 {
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.-translate-y-1\/4 {
+  --tw-translate-y: -25%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.-translate-y-3\/4 {
+  --tw-translate-y: -75%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.-translate-y-2\/4 {
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.-translate-y-2\/3 {
+  --tw-translate-y: -66.666667%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.translate-y-6 {
+  --tw-translate-y: 1.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 .scale-95 {
   --tw-scale-x: .95;
   --tw-scale-y: .95;
@@ -1901,6 +1959,38 @@ input[type="range"]::-ms-fill-lower {
 }
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+@-webkit-keyframes bounce {
+
+  0%, 100% {
+    transform: translateY(-25%);
+    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+            animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+            animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+@keyframes bounce {
+
+  0%, 100% {
+    transform: translateY(-25%);
+    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+            animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+            animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+.animate-bounce {
+  -webkit-animation: bounce 1s infinite;
+          animation: bounce 1s infinite;
 }
 .cursor-default {
   cursor: default;
@@ -2735,6 +2825,11 @@ input[type="range"]::-ms-fill-lower {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
 .delay-300 {
   transition-delay: 300ms;
 }
@@ -2765,58 +2860,11 @@ input[type="range"]::-ms-fill-lower {
 .ease-in {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
-.scrollbar {
-  --scrollbar-track: initial;
-  --scrollbar-thumb: initial;
-  --scrollbar-corner: initial;
-  --scrollbar-track-hover: var(--scrollbar-track);
-  --scrollbar-thumb-hover: var(--scrollbar-thumb);
-  --scrollbar-corner-hover: var(--scrollbar-corner);
-  --scrollbar-track-active: var(--scrollbar-track-hover);
-  --scrollbar-thumb-active: var(--scrollbar-thumb-hover);
-  --scrollbar-corner-active: var(--scrollbar-corner-hover);
-  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
-  overflow: overlay;
-}
 .scrollbar.overflow-x-hidden {
   overflow-x: hidden;
 }
 .scrollbar.overflow-y-hidden {
   overflow-y: hidden;
-}
-.scrollbar::-webkit-scrollbar-track {
-  background-color: var(--scrollbar-track);
-}
-.scrollbar::-webkit-scrollbar-thumb {
-  background-color: var(--scrollbar-thumb);
-}
-.scrollbar::-webkit-scrollbar-corner {
-  background-color: var(--scrollbar-corner);
-}
-.scrollbar::-webkit-scrollbar-track:hover {
-  background-color: var(--scrollbar-track-hover);
-}
-.scrollbar::-webkit-scrollbar-thumb:hover {
-  background-color: var(--scrollbar-thumb-hover);
-}
-.scrollbar::-webkit-scrollbar-corner:hover {
-  background-color: var(--scrollbar-corner-hover);
-}
-.scrollbar::-webkit-scrollbar-track:active {
-  background-color: var(--scrollbar-track-active);
-}
-.scrollbar::-webkit-scrollbar-thumb:active {
-  background-color: var(--scrollbar-thumb-active);
-}
-.scrollbar::-webkit-scrollbar-corner:active {
-  background-color: var(--scrollbar-corner-active);
-}
-.scrollbar {
-  scrollbar-width: auto;
-}
-.scrollbar::-webkit-scrollbar {
-  width: 16px;
-  height: 16px;
 }
 .scrollbar-thin {
   --scrollbar-track: initial;
@@ -2871,14 +2919,8 @@ input[type="range"]::-ms-fill-lower {
   width: 8px;
   height: 8px;
 }
-.scrollbar-track-gray-100 {
-  --scrollbar-track: #F3F4F6 !important;
-}
 .scrollbar-track-blue-300 {
   --scrollbar-track: #A4CAFE !important;
-}
-.scrollbar-thumb-gray-900 {
-  --scrollbar-thumb: #111827 !important;
 }
 .scrollbar-thumb-blue-700 {
   --scrollbar-thumb: #1A56DB !important;
@@ -3920,6 +3962,11 @@ input[type="range"]::-ms-fill-lower {
   .lg\:py-16 {
     padding-top: 4rem;
     padding-bottom: 4rem;
+  }
+
+  .lg\:py-1 {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
   }
 
   .lg\:pr-2 {
