@@ -1,6 +1,6 @@
 @section('meta')
     <meta name="description"
-        content="Index of movies free direct download. You'll movies direct download links here, with multiple download links and free download.">
+        content="Index of movies free direct download. Stream/watch movies online. You'll movies direct download links here, with multiple download links and free download.">
     <meta name="keywords"
         content="index of movies download, mkv movies download,movies direct download, free movies download online">
 @endsection
@@ -16,7 +16,7 @@
 
         <div class="flex content-center">
             <p class="w-4/5 md:w-3/4 sm:w-3/4 lg:w-3/4 m-auto text-gray-700 text-base dark:text-white my-4">
-                Download the latest HD tv series for free. The newest genres of movies in cinemas can be downloaded
+                Download the latest HD tv series for free. Stream/watch movies online. The newest genres of movies in cinemas can be downloaded
                 absolutely free of charge from our website, all genres like action, sci-fi, comedy, drama, horror and
                 others.
             </p>
@@ -67,7 +67,7 @@
                     }
                     
                     ?>
-                    {{-- cards --}}
+                    {{-- cards --}} 
                     <div class="relative w-36 md:w-52 lg:w-56 group my-4 m-auto" data-aos="zoom-in-up">
                         <img src="https://image.tmdb.org/t/p/w500{{ $data['poster_path'] }}" alt="{{ $data['title'] }}"
                             class="w-48 md:w-48 lg:w-48 h-auto md:h-60 lg:h-64 m-auto border-2 border-black dark:border-white rounded group-hover:opacity-60 group-hover:cursor-pointer duration-300">

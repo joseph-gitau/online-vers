@@ -55,6 +55,9 @@ class moviesDetails extends Controller
             }
 
             $jsonData[] = $response_similar;
+            // get stream links
+            $stream_links = DB::table('movies_stream')->where('a_id', $movie_id1)->get();
+            $jsonData[] = $stream_links;
             Cache::put('movies_details' . $cache_id, $jsonData, now()->addMinutes(360));
             Cache::put('download_response' . $cache_id, $download_response, now()->addMinutes(360));
             // dd($jsonData);

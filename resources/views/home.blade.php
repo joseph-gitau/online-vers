@@ -1,11 +1,11 @@
 @section('meta')
     <meta name="description"
-        content="Fastmovies1, free movies and tv-series with direct download links...HD quality and diferrent download qualities. Choose from your preferred quality to download">
+        content="Fastmovies1, free movies and tv-series with direct download links...HD quality and diferrent download qualities. Watch/Stream movies online with your preffered qualities  Choose from your preferred quality to download">
     <meta name="keywords"
-        content="index of Fastmovies1, Index of movies Fastmovies1, Index of tv-series, direct download links Fastmovies, Fastmovies1" />
+        content="index of Fastmovies1, Index of movies Fastmovies1, Stream movies online, Watch movies online, Index of tv-series, direct download links Fastmovies, Fastmovies1" />
     <meta property="og:title" content="Fastmovies1 | Index of Movies and TV-series">
     <meta property="og:description"
-        content="Fastmovies1, free movies and tv-series with direct download links...HD quality and diferrent download qualities. Choose from your preferred quality to download">
+        content="Fastmovies1, free movies and tv-series with direct download links...HD quality and diferrent download qualities. Watch/Stream movies online with your preffered qualities  Choose from your preferred quality to download">
     <meta property="og:url" content="https://fastmovies1.com">
 @endsection
 @section('title')
@@ -19,7 +19,7 @@
     <div class="w-screen">
         <h1 class="text-center text-600 text-2xl py-8">Fastmovies1</h1>
         <p class="w-9/12 md:w-10/12 lg:w-9/12 py-6 text-base m-auto dark:text-white">
-            Welcome to Fastmovies1.com. Download the latest movies and series with different qualities: 480p, 720p,
+            Welcome to Fastmovies1.com. Download and stream/watch the latest movies and series with different qualities: 480p, 720p,
             1080p and 4k for free. The newest genres of movies in cinemas can be downloaded absolutely free of charge
             from our website, all genres like action, sci-fi, comedy, drama, horror and others.
         </p>
@@ -93,7 +93,7 @@
         </div>
         {{-- popular movies template --}}
         <div class="w-3/12 m-auto">
-            <livewire:templates.movies />
+            {{-- <livewire:templates.movies /> --}}
         </div>
     </div>
     {{-- popular series --}}
