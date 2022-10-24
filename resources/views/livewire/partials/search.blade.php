@@ -1,11 +1,24 @@
 <div>
     {{-- The Master doesn't talk, he acts. --}}
+    {{-- get a search term from search placeholders to use as placeholder --}}
+    <?php
+    include '../dbh.php';
+    $sql = 'SELECT * FROM search_placeholders order by id DESC Limit 2';
+    $result = mysqli_query($conn, $sql);
+    $search_placeholder = [];
+    while ($row = mysqli_fetch_assoc($result)) {
+        $search_placeholder[] = $row['term'];
+    }
+    // choose random search placeholder
+    $placeholder = $search_placeholder[array_rand($search_placeholder)];
+    // $placeholder = $row['term'];
+    ?>
     <div class="flex items-center justify-center relative mr-6">
         <form action="#" method="GET">
             <div class="normal-search flex">
                 <input type="text"
-                    class="px-4 py-1.5 w-60 sm:w-52 md:w-56 lg:w-60 border-2 border-gray-600 rounded-tl-3xl rounded-bl-3xl outline:none bg-gray-100"
-                    placeholder="Search a movie or serie">
+                    class="px-4 py-1.5 w-60 sm:w-52 md:w-56 lg:w-60 border-2 border-gray-600 rounded-tl-3xl rounded-bl-3xl outline:none bg-gray-100 dark:bg-gray-800"
+                    placeholder="Search '{{ $placeholder }}'">
                 <button
                     class="flex items-center justify-center px-4 border-2 border-gray-600 border-l-0 rounded-tr-3xl rounded-br-3xl bg-blue-400 text-white">
                     {{-- <i class="fa fa-search" aria-hidden="true"></i> --}}

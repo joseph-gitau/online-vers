@@ -50,7 +50,7 @@
                             class="py-2 px-6 bg-500 hover:bg-600 border border-500 rounded-xl w-38 md:w-48 lg:w-64 ease-out duration-300 my-4 text-white ml-2 lg:ml-0 md:ml-0">Download</button>
                     </div>
                     {{-- check if name[2] is null --}}
-                    @if ($name[3] == null)
+                    @if ($name[3]->isEmpty())
                         <h1 class="hidden">null</h1>
                     @else
                         <div class="w-44 lg:w-64 m-auto lg:ml-6">

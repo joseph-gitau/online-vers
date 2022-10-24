@@ -9,7 +9,39 @@
 </head>
 
 <body>
-    <div id="player" class="webtor" />
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+        <?php
+
+        // PHP code to get the MAC address of Server
+        $MAC = exec('getmac');
+
+        // Storing 'getmac' value in $MAC
+        $MAC = strtok($MAC, ' ');
+
+        // Updating $MAC value using strtok function,
+        // strtok is used to split the string into tokens
+        // split character of strtok is defined as a space
+        // because getmac returns transport name after
+        // MAC address
+        echo "MAC address of Server is: $MAC";
+        ?>
+
+
+    </body>
+
+    </html>
+    <div id="players" class="webtor" />
     <script>
         const options = {
             method: 'GET',
