@@ -248,12 +248,14 @@
         </div>
     </nav>
 @else
-    <nav x-data="{ open: false }" class="bg-white dark:bg-slate-700 border-b border-gray-100">
+    {{-- ts bg-white dark:bg-slate-700 --}}
+    <nav x-data="{ open: false }"
+        class=" border-b border-gray-100 bg-gradient-to-br from-gray-100 to-gray-200  dark:from-slate-900 dark:to-slate-800">
 
         <!-- Primary Navigation Menu v2 -->
         <div class="max-w-7xl md:w-screen sm:w-screen mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
-                <div class="flex">
+                <div class="flex relative ">
                     <!-- Logo -->
                     <div class="shrink-0 flex items-center">
                         <a href="/home" class="">
@@ -263,19 +265,19 @@
                     </div>
                     {{-- search --}}
                     <div
-                        class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex ml-24 items-center xl:ml-24 sm:hidden md:hidden lg:flex">
+                        class="hidden space-x-8 sm:-my-px sm:ml-10 ml-24 items-center xl:ml-24 sm:hidden md:hidden lg:flex">
                         <livewire:partials.search />
 
                     </div>
-                    <div @click="open = ! open"
-                        class="lg:hidden text-gray-800 dark:text-white text-3xl space-x-8 sm:-my-px sm:ml-6 sm:flex ml-20 content-center py-4">
-                        {{-- <i class="fa fa-search" aria-hidden="true"></i> --}}
-                        <svg xmlns="https://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                    {{-- <div @click="open = ! open"
+                        class="lg:hidden text-gray-800 dark:text-white text-3xl space-x-10 sm:-my-px sm:ml-6 sm:flex content-center py-4 px-4 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <svg xmlns="https://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                             class="bi bi-search" viewBox="0 0 16 16">
                             <path
                                 d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                         </svg>
-                    </div>
+                    </div> --}}
 
                     <!-- Navigation Links -->
                     <div class="hidden space-x-8 sm:-my-px sm:ml-6 sm:flex md:ml-8 ml-32 sm:mr-16 mr-24">
@@ -306,12 +308,12 @@
                                 </button>
                                 <ul class="dropdown-menu absolute hidden text-gray-700 pt-2 group-hover:block z-[9999]">
                                     <li class="">
-                                        <a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap dark:bg-gray-600 dark:hover-bg-gray-900 text-base leading-6 font-medium text-gray-900 dark:text-white hover:underline dark:text-white"
+                                        <a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap dark:bg-gray-600 dark:hover-bg-gray-900 text-base leading-6 font-medium text-gray-900 dark:text-white hover:underline"
                                             href="/moviesIndex">Movies</a>
                                     </li>
                                     <hr>
                                     <li class="">
-                                        <a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap dark:bg-gray-600 dark:hover-bg-gray-900 text-base leading-6 font-medium text-gray-900 dark:text-white hover:underline dark:text-white"
+                                        <a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap dark:bg-gray-600 dark:hover-bg-gray-900 text-base leading-6 font-medium text-gray-900 dark:text-white hover:underline"
                                             href="/seriesIndex">series</a>
                                     </li>
 
@@ -325,7 +327,7 @@
                             <div class="relative w-11 h-auto">
                                 <button data-tooltip-target="tooltip-bottom" data-tooltip-placement="bottom"
                                     id="theme-toggle" type="button"
-                                    class="place-content-evenly w-11 h-auto mt-3.5 has-tooltip text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 dark:border-2 dark:hover:bg-gray-600">
+                                    class="place-content-evenly w-11 h-auto mt-3.5 has-tooltip text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 dark:border-2">
                                     <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor"
                                         viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
@@ -339,7 +341,7 @@
                                 </button>
                             </div>
                             <div id="tooltip-bottom" role="tooltip"
-                                class="invisible group-hover:visible tooltip flex absolute mt-4 -mx-6 z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-1 tooltip dark:bg-gray-700">
+                                class="invisible group-hover:visible tooltip flex absolute mt-4 -mx-6 z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-1 dark:bg-gray-700">
                                 Toggle Dark mode
                                 <div class="tooltip-arrow" data-popper-arrow></div>
                             </div>
@@ -348,11 +350,20 @@
                         {{-- </x-jet-responsive-nav-link> --}}
                     </div>
                 </div>
+                <div @click="open = ! open"
+                    class="lg:hidden text-gray-800 dark:text-white text-3xl space-x-10 sm:-my-px sm:ml-6 sm:flex content-center py-4 px-4 ">
+                    {{-- <i class="fa fa-search" aria-hidden="true"></i> --}}
+                    <svg xmlns="https://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                </div>
                 <div class="md:hidden sm:hidden lg:hidden group content-center pb-8">
                     <div class="relative w-11 h-auto -mt-1">
                         <button data-tooltip-target="tooltip-bottom" data-tooltip-placement="bottom" id="theme-toggle2"
                             type="button"
-                            class="place-content-evenly w-11 h-auto mt-3.5 has-tooltip text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 dark:border-2 dark:hover:bg-gray-600">
+                            class="place-content-evenly w-11 h-auto mt-3.5 has-tooltip text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 dark:border-2">
                             <svg id="theme-toggle-dark-icon2" class="hidden w-5 h-5" fill="currentColor"
                                 viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
@@ -366,7 +377,7 @@
                         </button>
                     </div>
                     <div id="tooltip-bottom2" role="tooltip"
-                        class="invisible group-hover:visible tooltip flex absolute mt-4 -mx-6 z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-1 tooltip dark:bg-gray-700">
+                        class="invisible group-hover:visible tooltip flex absolute mt-4 -mx-6 z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-1 dark:bg-gray-700">
                         Toggle Dark mode
                         <div class="tooltip-arrow" data-popper-arrow></div>
                     </div>
@@ -419,12 +430,12 @@
                         </button>
                         <ul class="dropdown-menu absolute hidden text-gray-700 pt-2 group-hover:block z-[9999]">
                             <li class="">
-                                <a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap dark:bg-gray-600 dark:hover-bg-gray-900 text-base leading-6 font-medium text-gray-900 dark:text-white hover:underline dark:text-white"
+                                <a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap dark:bg-gray-600 dark:hover-bg-gray-900 text-base leading-6 font-medium text-gray-900 dark:text-white hover:underline"
                                     href="/moviesIndex">Movies</a>
                             </li>
                             <hr>
                             <li class="">
-                                <a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap dark:bg-gray-600 dark:hover-bg-gray-900 text-base leading-6 font-medium text-gray-900 dark:text-white hover:underline dark:text-white"
+                                <a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap dark:bg-gray-600 dark:hover-bg-gray-900 text-base leading-6 font-medium text-gray-900 hover:underline dark:text-white"
                                     href="/seriesIndex">series</a>
                             </li>
 

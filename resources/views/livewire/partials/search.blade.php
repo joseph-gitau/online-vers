@@ -33,7 +33,7 @@
     </div>
     {{-- results --}}
     <div class="flex absolute">
-        <div class="flex w-auto lg:max-w-[650px] lg:min-w-2/4 pb-6 pt-4 h-auto bg-gray-300 dark:bg-slate-800 flex flex-wrap rounded z-[99998] results"
+        <div class="w-auto lg:max-w-[650px] lg:min-w-2/4 pb-6 pt-4 h-auto bg-gray-300 dark:bg-slate-800 flex flex-wrap rounded z-[99998] results"
             id="results">
             <div class="loader-se hidden w-60 sm:w-52 md:w-56 lg:w-60 z-[99999]">
                 <img src="https://fastmovies1.com/oldfastmovies1/resources/images/Spinner.gif" alt="Spinner"

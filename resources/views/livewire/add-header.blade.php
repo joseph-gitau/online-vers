@@ -2,7 +2,7 @@
     {{-- Because she competes with no one, no one can compete with her. --}}
     {{-- nav v2 --}}
     <hr class="w-10/12 m-auto">
-    <div class="bg-white dark:bg-slate-700 hidden md:block lg:block">
+    <div class="hidden md:block lg:block">
         {{-- contents --}}
         <div class="w-10/12 m-auto ">
             <div class="flex justify-between">

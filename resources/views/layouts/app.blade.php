@@ -47,10 +47,10 @@
             }
 
             /*!
-                                                                                                 * Load Awesome v1.1.0 (http://github.danielcardoso.net/load-awesome/)
-                                                                                                 * Copyright 2015 Daniel Cardoso <@DanielCardoso>
-                                                                                                 * Licensed under MIT
-                                                                                                 */
+                                                                                                                                     * Load Awesome v1.1.0 (http://github.danielcardoso.net/load-awesome/)
+                                                                                                                                     * Copyright 2015 Daniel Cardoso <@DanielCardoso>
+                                                                                                                                     * Licensed under MIT
+                                                                                                                                     */
             .la-ball-clip-rotate-multiple,
             .la-ball-clip-rotate-multiple>div {
                 position: relative;
@@ -176,8 +176,8 @@
             }
 
             /*
-                                                                                                 * Animation
-                                                                                                 */
+                                                                                                                                     * Animation
+                                                                                                                                     */
             @-webkit-keyframes ball-clip-rotate-multiple-rotate {
                 0% {
                     -webkit-transform: translate(-50%, -50%) rotate(0deg);
@@ -310,41 +310,43 @@
                     height: 400px;
                 }
             }
+
             #loading-bar-spinner.spinner {
-            left: 50%;
-            margin-left: -20px;
-            top: 20%;
-            margin-top: -20px;
-            position: absolute;
-            z-index: 19 !important;
-            /* height: 40px; */
-            animation: loading-bar-spinner 400ms linear infinite;
-        }
-
-        #loading-bar-spinner.spinner .spinner-icon {
-            width: 40px;
-            height: 40px;
-            border: solid 4px transparent;
-            border-top-color: #00C8B1 !important;
-            border-left-color: #00C8B1 !important;
-            border-radius: 50%;
-        }
-
-        @keyframes loading-bar-spinner {
-            0% {
-                transform: rotate(0deg);
-                transform: rotate(0deg);
+                left: 50%;
+                margin-left: -20px;
+                top: 20%;
+                margin-top: -20px;
+                position: absolute;
+                z-index: 19 !important;
+                /* height: 40px; */
+                animation: loading-bar-spinner 400ms linear infinite;
             }
 
-            100% {
-                transform: rotate(360deg);
-                transform: rotate(360deg);
+            #loading-bar-spinner.spinner .spinner-icon {
+                width: 40px;
+                height: 40px;
+                border: solid 4px transparent;
+                border-top-color: #00C8B1 !important;
+                border-left-color: #00C8B1 !important;
+                border-radius: 50%;
             }
-        }
-        /* webtor iframe  */
-        .webtor iframe{
-            width: 100% !important;
-        }
+
+            @keyframes loading-bar-spinner {
+                0% {
+                    transform: rotate(0deg);
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                    transform: rotate(360deg);
+                }
+            }
+
+            /* webtor iframe  */
+            .webtor iframe {
+                width: 100% !important;
+            }
         </style>
     @endpush
     @stack('styles')
@@ -379,7 +381,7 @@
 
 </head>
 
-<body class="font-sans antialiased overflow-x-hidden dark:bg-slate-900 dark:text-white">
+<body class="font-sans antialiased overflow-x-hidden dark:text-white bg-gradient-to-br from-slate-900 to-slate-700">
 
     {{-- loader --}}
     <div id="loadergif" class="">
@@ -393,9 +395,9 @@
     </div>
     <x-jet-banner />
 
-    <div class="min-h-screen m-auto bg-gray-100 dark:bg-slate-900">
+    <div class="min-h-screen m-auto bg-gradient-to-br from-gray-100 to-gray-200  dark:from-slate-900 dark:to-slate-800">
         @livewire('navigation-menu')
-        {{-- <livewire:partials.navbar /> --}}
+        {{-- <livewire:partials.navbar />bg-gray-100 dark:bg-slate-900 --}}
 
         <!-- Page Heading -->
         @if (isset($header))
