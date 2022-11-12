@@ -353,17 +353,17 @@
                 <div @click="open = ! open"
                     class="lg:hidden text-gray-800 dark:text-white text-3xl space-x-10 sm:-my-px sm:ml-6 sm:flex content-center py-4 px-4 ">
                     {{-- <i class="fa fa-search" aria-hidden="true"></i> --}}
-                    <svg xmlns="https://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    <svg xmlns="https://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                         class="bi bi-search" viewBox="0 0 16 16">
                         <path
                             d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                     </svg>
                 </div>
                 <div class="md:hidden sm:hidden lg:hidden group content-center pb-8">
-                    <div class="relative w-11 h-auto -mt-1">
+                    <div class="relative w-10 h-auto -mt-1">
                         <button data-tooltip-target="tooltip-bottom" data-tooltip-placement="bottom" id="theme-toggle2"
                             type="button"
-                            class="place-content-evenly w-11 h-auto mt-3.5 has-tooltip text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 dark:border-2">
+                            class="place-content-evenly w-11 h-auto mt-3.5 has-tooltip text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2 dark:border-2">
                             <svg id="theme-toggle-dark-icon2" class="hidden w-5 h-5" fill="currentColor"
                                 viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
@@ -396,6 +396,34 @@
                         </svg>
                     </button>
                 </div>
+            </div>
+            {{-- sub menu --}}
+            {{-- hr --}}
+            <hr class="w-full m-auto lg:hidden md:hidden sm:hidden">
+            <div class="w-screen flex  py-2 my-3 lg:hidden md:hidden sm:hidden">
+
+                {{-- @for ($i = 0; $i < 5; $i++)
+                    <a href="/home"
+                        class="active:underline-offset-1 text-gray-900 dark:text-500 bg-gray-200 hover:bg-gray-300 active:bg-500 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">
+                        Home
+                    </a>
+                @endfor --}}
+                <a href="/home"
+                    class="active:underline-offset-1 text-gray-900 dark:text-500 bg-gray-200 hover:bg-gray-300 active:bg-500 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-3 py-2 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">
+                    Home
+                </a>
+                <a href="/movies"
+                    class="active:underline-offset-1 text-gray-900 dark:text-500 bg-gray-200 hover:bg-gray-300 active:bg-500 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-3 py-2 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">
+                    Movies
+                </a>
+                <a href="/series"
+                    class="active:underline-offset-1 text-gray-900 dark:text-500 bg-gray-200 hover:bg-gray-300 active:bg-500 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-3 py-2 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">
+                    Series
+                </a>
+                <a href="/latest"
+                    class="active:underline-offset-1 text-gray-900 dark:text-500 bg-gray-200 hover:bg-gray-300 active:bg-500 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-3 py-2 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">
+                    Latest
+                </a>
             </div>
         </div>
 

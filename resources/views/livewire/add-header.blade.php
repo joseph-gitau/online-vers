@@ -1,7 +1,7 @@
 <div>
     {{-- Because she competes with no one, no one can compete with her. --}}
     {{-- nav v2 --}}
-    <hr class="w-10/12 m-auto">
+    <hr class="w-10/12 m-auto hidden lg:block">
     <div class="hidden md:block lg:block">
         {{-- contents --}}
         <div class="w-10/12 m-auto ">
