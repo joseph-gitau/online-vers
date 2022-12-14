@@ -206,3 +206,58 @@ latmovcont.append(`
 
 });
 });
+
+
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.util.ArrayList;
+
+public class SecurityTypeList {
+
+// Create an ArrayList of SecurityType objects
+private static ArrayList<SecurityType> securityTypes = new ArrayList<>();
+
+        public static void main(String[] args) {
+
+        // Add some SecurityType objects to the list
+        securityTypes.add(new SecurityType("Stock", "Equity security that represents ownership in a company"));
+        securityTypes.add(new SecurityType("Bond", "Debt security that represents a loan made by an investor to a borrower"));
+        securityTypes.add(new SecurityType("Derivative", "Financial contract whose value is derived from the performance of an underlying asset"));
+        securityTypes.add(new SecurityType("Commodity", "Basic good used in commerce that is interchangeable with other goods of the same type"));
+        securityTypes.add(new SecurityType("Currency", "Medium of exchange that is issued by a government and used as legal tender"));
+        securityTypes.add(new SecurityType("Real estate", "Property consisting of land and buildings"));
+        securityTypes.add(new SecurityType("Collectible", "Rare or unique item that is highly valued by collectors"));
+        securityTypes.add(new SecurityType("Cryptocurrency", "Digital asset that uses cryptography for security and is decentralized"));
+
+        // Save the securityTypes list to a file using serialization
+        try (FileOutputStream fos = new FileOutputStream("securityTypes.ser");
+        ObjectOutputStream oos = new ObjectOutputStream(fos)) {
+        oos.writeObject(securityTypes);
+        } catch (IOException e) {
+        System.out.println("Error saving securityTypes to file: " + e.getMessage());
+        }
+
+        // Open the securityTypes file and de-serialize the contents
+        try (FileInputStream fis = new FileInputStream("securityTypes.ser");
+        ObjectInputStream ois = new ObjectInputStream(fis)) {
+        securityTypes = (ArrayList<SecurityType>) ois.readObject();
+            } catch (IOException e) {
+            System.out.println("Error opening securityTypes file: " + e.getMessage());
+            // If the file is not found, start with an empty list
+            securityTypes = new ArrayList<>();
+                }
+
+                // Sort the securityTypes list by SecurityType or Security name
+                securityTypes.sort(Comparator.comparing(SecurityType::getSecurityType)
+                .thenComparing(SecurityType::getSecurityName));
+
+                // Print out the sorted list of securityTypes
+                for (SecurityType securityType : securityTypes) {
+                System.out.println(securityType.getSecurityType() + " - " + securityType.getSecurityName());
+                }
+
+                }
+
+                }

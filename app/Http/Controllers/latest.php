@@ -12,7 +12,8 @@ class latest extends Controller
 {
     public function index()
     {
-        if (Cache::has('latestData')) {
+        // Cache::has('latestData')
+        if (2 < 1) {
             $jsonData = Cache::get('latestData');
         } else {
             $key = "3c2fd11dc93ee3dfdcf927cc73990153";
@@ -89,6 +90,9 @@ class latest extends Controller
             // get the data from cache
             $jsonData = Cache::get('latestData');
         }
+        //  test no of newseris
+        $countSeries = DB::table('newseries')->count();
+        // dd($countSeries);
         // dd($jsonData);
         return view('latest', ['name' => $jsonData]);
     }

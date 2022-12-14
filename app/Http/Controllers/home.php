@@ -28,7 +28,7 @@ class home extends Controller
             // api large Container
             $apiContent = [];
             $apiSeries = [];
-            $series = DB::select('select * from newSeries order by id desc limit 8');
+            $series = DB::select('select * from newseries order by id desc limit 8');
             foreach ($series as $ser) {
                 $old_id = $ser->a_id;
                 $s_id = $ser->tmdb_id;

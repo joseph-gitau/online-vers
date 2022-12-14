@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "fastmovi_epiz_28351378_fastmovies_local";
+$dbname = "fastmovi_epiz_28351378_fastmovies_localv2";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

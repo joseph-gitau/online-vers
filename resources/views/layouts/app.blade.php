@@ -47,10 +47,10 @@
             }
 
             /*!
-                                                                                                                                     * Load Awesome v1.1.0 (http://github.danielcardoso.net/load-awesome/)
-                                                                                                                                     * Copyright 2015 Daniel Cardoso <@DanielCardoso>
-                                                                                                                                     * Licensed under MIT
-                                                                                                                                     */
+                                                                                                                                                                                             * Load Awesome v1.1.0 (http://github.danielcardoso.net/load-awesome/)
+                                                                                                                                                                                             * Copyright 2015 Daniel Cardoso <@DanielCardoso>
+                                                                                                                                                                                             * Licensed under MIT
+                                                                                                                                                                                             */
             .la-ball-clip-rotate-multiple,
             .la-ball-clip-rotate-multiple>div {
                 position: relative;
@@ -176,8 +176,8 @@
             }
 
             /*
-                                                                                                                                     * Animation
-                                                                                                                                     */
+                                                                                                                                                                                             * Animation
+                                                                                                                                                                                             */
             @-webkit-keyframes ball-clip-rotate-multiple-rotate {
                 0% {
                     -webkit-transform: translate(-50%, -50%) rotate(0deg);
@@ -346,6 +346,26 @@
             /* webtor iframe  */
             .webtor iframe {
                 width: 100% !important;
+            }
+
+            .loaderSearch {
+                justify-content: center;
+                align-items: center;
+                display: flex;
+
+            }
+
+            i.loaderSearch {
+                /* background: url(/assets/images/loader.svg) no-repeat; */
+                width: 40px;
+                height: 40px;
+                display: block;
+                margin: auto;
+                background-size: 40px;
+                /* -webkit-filter: invert(35%) sepia(78%) saturate(2159%) hue-rotate(208deg) brightness(98%) contrast(108%);
+                            filter: invert(35%) sepia(78%) saturate(2159%) hue-rotate(208deg) brightness(98%) contrast(108%); */
+                -webkit-filter: invert(84%) sepia(33%) saturate(6723%) hue-rotate(354deg) brightness(97%) contrast(98%);
+                filter: invert(84%) sepia(33%) saturate(6723%) hue-rotate(354deg) brightness(97%) contrast(98%);
             }
         </style>
     @endpush

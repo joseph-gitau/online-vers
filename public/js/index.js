@@ -105,7 +105,7 @@ $(document).ready(function () {
 $(window).on("load", function () {
     //Do the code in the {}s when the window has loaded
     $("#loadergif").fadeOut("slow"); //Fade out the #loader div
-    console.clear();
+    // console.clear();
 });
 // search
 $(document).ready(function () {
@@ -214,3 +214,40 @@ $(document).ready(function () {
         }
     );
 }); */
+
+// improved search
+$(document).ready(function () {
+    var timeout = null;
+    // on search input keyup or change
+    $("#searchTerm").on("keyup input", function () {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => {
+            $("#results-wrapper").show();
+            // get selected search type from select option
+            var searchType = $("#searchOption").val();
+            // get search input value
+            var inputVal = $(this).val();
+            console.log(inputVal);
+            console.log(searchType);
+            // results div
+            var resultDropdown = $("#results");
+            resultDropdown.empty();
+            $(".loaderSearch").show();
+            // if search input value is not empty
+            if (inputVal.length) {
+                // show loading icon
+                // $("#results").show();
+                // ajax call to search.php
+                $.get("/search/" + inputVal, {
+                    // term: inputVal,
+                }).done(function (data) {
+                    // display results
+                    resultDropdown.html(data);
+                    // hide loading icon
+                    $(".loaderSearch").fadeOut();
+                });
+            }
+        }, 1000);
+    });
+});
+console.log("hello");

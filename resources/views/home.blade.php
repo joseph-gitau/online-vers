@@ -49,7 +49,7 @@
                 $server = 'localhost';
                 $username = 'root';
                 $password = '';
-                $dbname = 'fastmovi_epiz_28351378_fastMovies_local';
+                $dbname = 'fastmovi_epiz_28351378_fastMovies_localv2';
                 /* $server = "31.22.4.240";
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         $username = "fastmovi_burt";
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         $password = "zy;?f9lDgBUM";
