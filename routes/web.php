@@ -41,7 +41,7 @@ Route::get('/series/{id}', [seriesDetails::class, 'index']);
 Route::get('/series/download/{id}', [seriesDetails::class, 'download']);
 Route::get('/movies', [movies::class, 'index']);
 Route::get('search/{id}', [search::class, 'index']);
-Route::get('/results/{id}', [search::class, 'index']);
+Route::get('/results', [search::class, 'result']);
 Route::get('/movies/category/{id}', [category::class, 'index']);
 Route::get('/series/category/{id}', [category::class, 'series']);
 /* Route::get('/series', function () {
@@ -55,6 +55,10 @@ Route::get('/disclaimer', function () {
 // terms and conditions
 Route::get('/terms', function () {
     return view('terms');
+});
+// privacy policy
+Route::get('/privacy', function () {
+    return view('privacy');
 });
 // moviesIndex
 Route::get('/moviesIndex', [movies::class, 'indexmovies']);

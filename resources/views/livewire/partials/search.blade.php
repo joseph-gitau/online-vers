@@ -32,18 +32,23 @@
         </form>
     </div> --}}
     <div class="flex align-center justify-center">
-        <form action="" method="GET" class="w-full">
-            <div class="flex normal-search">
+        <form action="/results" method="GET" class="w-full">
+            {{-- {{ csrf_field() }} --}}
+            <div class="flex normal-search w-full lg:w-60">
 
-                <select name="mors" id="searchOption"
+                {{-- <select name="mors" id="searchOption"
                     class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-1 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-3xl border-r-0 hover:bg-gray-200 focus:ring-1 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600">
                     <option value="movies">Movies</option>
                     <option value="series">Series</option>
-                </select>
+                </select> --}}
                 <div class="relative w-full">
-                    <input type="search" id="searchTerm" name="searchTerm"
-                        class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-3xl border-l-0  border border-gray-300 focus:ring-gray-700 focus:border-gray-700 dark:bg-gray-700 dark:border-l-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-gray-700"
+                    <input type="search" id="searchTerm" name="q"
+                        class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-3xl border-l-0  border border-gray-300 focus:ring-gray-700 focus:border-gray-700 dark:bg-gray-700 dark:border-l-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-gray-700"
                         placeholder='Search "{{ $placeholder }}"' autocomplete="off">
+                    {{-- X icon --}}
+                    <i class="fas fa-times search_close absolute top-0 right-0 z-10 hover:text-red-700 duration-150 hidden"
+                        style="transform: translate(-350%, 75%);"></i>
+
                     <button type="submit"
                         class="absolute top-0 right-0 p-2.5 text-md font-medium text-white  rounded-r-3xl border-0 focus:ring-1 focus:outline-none focus:ring-blue-300 dark:bg-gray-700 dark:hover:bg-gray-700 dark:focus:ring-blue-800">
                         <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -59,9 +64,9 @@
     </div>
     {{-- results --}}
     <div class="flex absolute">
-        <div class="w-full lg:max-w-[650px] lg:min-w-2/4 pb-6 pt-4 h-auto bg-gray-300 dark:bg-slate-800 rounded z-[99998] hidden"
+        <div class="w-full lg:max-w-[650px] lg:min-w-2/4 pb-6 pt-4 h-auto bg-gray-300 dark:bg-slate-800 rounded z-[99998]"
             id="results-wrapper">
-            <div class="loader-se w-full z-[99999] py-2">
+            <div class="loader-se w-56 m-auto z-[99999] py-2 hidden">
                 <i class="loaderSearch"><svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px"
                         height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
@@ -77,9 +82,39 @@
                         </path>
                     </svg></i>
             </div>
-            <div class="flex flex-wrap min-h-max results" id="results">
+            <div class="results" id="results">
+
+                {{-- <div class="movies">
+                    <h2 class="search_head my-2 ml-8 underline hidden">Movies</h2>
+                    <div class="flex flex-row flex-wrap">
+                         @for ($i = 0; $i < 4; $i++)
+                            <div class="w-1/4 my-1 h-36 lg:h-44 ">
+                                <div class="w-10/12 m-auto h-32">
+                                    <img src="/assets/movies/parallels.jpg" alt="Parrallels"
+                                        class="w-9/12 m-auto h-auto border rounded ">
+                                    <h2 class="dark:text-white pl-2">Movie name</h2>
+                                </div>
+                            </div>
+                        @endfor 
+                    </div>
+                </div> --}}
+                {{-- <div class="series">
+                    <h2 class="search_head my-2 ml-8 underline hidden">Series</h2>
+                    <div class="flex flex-row flex-wrap">
+                        @for ($i = 0; $i < 4; $i++)
+                            <div class="w-1/4 my-1 h-36 lg:h-44 ">
+                                <div class="w-10/12 m-auto h-32">
+                                    <img src="/assets/movies/parallels.jpg" alt="Parrallels"
+                                        class="w-9/12 m-auto h-auto border rounded ">
+                                    <h2 class="dark:text-white pl-2">Movie name</h2>
+                                </div>
+                            </div>
+                        @endfor 
+                    </div>
+                </div> --}}
+                {{-- <div class="flex flex-wrap min-h-max results" id="results">
                 <!-- loader -->
-                {{-- @for ($i = 0; $i < 4; $i++)
+                @for ($i = 0; $i < 4; $i++)
                     <div class="w-1/3 my-2 h-36 lg:h-44">
                         <div class="w-10/12 m-auto h-32">
                             <img src="/assets/movies/parallels.jpg" alt="Parrallels"
@@ -87,15 +122,15 @@
                             <h2 class="dark:text-white">Movie name</h2>
                         </div>
                     </div>
-                @endfor --}}
-            </div>
-            {{-- show all button --}}
-            <div class="w-full flex justify-center">
-                <a href="#"
-                    class="w-60 sm:w-52 md:w-56 lg:w-60 bg-500 hover:bg-400 hover:cursor-pointer duration-300 text-white text-center py-2 rounded mt-4">Show
-                    all</a>
+                @endfor
+            </div> --}}
+                {{-- show all button --}}
+                <div class="w-full justify-center hidden">
+                    <a href="#"
+                        class="w-60 sm:w-52 md:w-56 lg:w-60 bg-500 hover:bg-400 hover:cursor-pointer duration-300 text-white text-center py-2 rounded mt-4">Show
+                        all</a>
+                </div>
             </div>
         </div>
     </div>
-
 </div>

@@ -18,7 +18,7 @@
     <div class="container">
         <div class="w-3/4 m-auto pt-6">
             <h1 class="py-2 text-2xl font-bold text-500">Fastmovies1.com User Agreement / Terms and Conditions</h1>
-            <div class="dark:text-white pb-8">
+            {{-- <div class="dark:text-white pb-8">
                 Using this site means you accept its terms. Read these terms and conditions of use carefully before using this website. This user agreement is needed mostly to make sure that our good deed of putting all this great stuff on the net goes unpunished, and to emphasize that publication rights are not being given away. "Look but don't touch." The goal is for you to enjoy viewing these historic treasures on the Fastmovies1 website, not to keep them locked away out of sight, but theft of content from this website will seriously anger our generous donors who have allowed their rare and valuable collections to be displayed here and will put our entire project in jeopardy, so please contact us when we can be of help, or if you have ideas about how to do this better, but please don't get mad at us for only being able to let you see these wonderful torrents until you obtain permission for other use as we attempt to deal as best we can with technological limitations, legal requirements, and our need to pay the bills to keep this site open, and don't send us a rant without first reading our rants page. If you do not intend to be legally bound by these terms and conditions, please do not access or use this website.
 
                 <br><br>
@@ -80,7 +80,6 @@
                 <br><br>
                 THERE IS NO WARRANTY FOR THIS WEBSITE OR ITS CONTENT OR LINKS, NOR FOR ANY TORRENTS OR OTHER CONTENT OBTAINED THROUGH OR OTHERWISE IN CONNECTION WITH THIS WEBSITE. THE Fastmovies1, Fastmovies1.com, THE COPYRIGHT HOLDER(S), OTHER RIGHTS HOLDERS, LICENSOR, AND/OR OTHER PARTIES AND THEIR AFFILIATES, OR THE LIKE, THAT PROVIDE THIS WEBSITE AND ITS CONTENT, INCLUDING REPRODUCTIONS OF SELECTED ITEMS FROM COLLECTIONS AND LINKS DO SO "AS IS", "AS AVAILABLE", AND WITH ALL FAULTS, WITHOUT USER SUPPORT OR WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE, TITLE, EXPECTATION OF PRIVACY, LACK OF VIRUSES, CORRUPTED FILES, OR OTHER MALICIOUS OR ERRONEOUS SOFTWARE, AVAILABILITY, RELIABILITY, QUALITY, ACCURACY, CORRECTNESS, COMPLETENESS, CORRECTNESS OF TORRENT IDENTIFICATION OR DESCRIPTION, COMPATABILITY, TIMELINESS, DECENCY, AND FREEDOM FROM INFRINGEMENT. ANY RESULTS OR OUTCOME AS A RESULT OF THE USE OF THIS INFORMATION AND THE ENTIRE RISK OF ACCESS TO OR USE OF THIS WEBSITE AND ITS CONTENT AND LINKS IS WITH YOU. SPECIFICATIONS AND EQUIPMENT ARE SUBJECT TO CHANGE WITHOUT ANY NOTICE OR OBLIGATION BY US. SHOULD THE WEBSITE OR ITS CONTENT, TORRENTS, DOWNLOADS, OR LINKS, OR OUR COMMUNICATIONS OR ATTACHMENTS THERETO PROVE TO BE FAULTY, INACCURATE, INCORRECT, UNRELIABLE, NOT TO MEET ANY OF YOUR PARTICULAR REQUIREMENTS, OR TO BE OTHERWISE UNACCEPTABLE, YOU ASSUME THE COST OF ALL NECESSARY SUPPORT, REPAIR, OR CORRECTION. WE SHALL NOT BE LIABLE OR RESPONSIBLE FOR NONPERFORMANCE OR DELAY IN PERFORMANCE CAUSED BY ANY REASON, WHETHER WITHIN OR OUTSIDE OF OUR CONTROL, INCLUDING BUT NOT LIMITED TO TECHNICAL MALFUNCTIONS OF ANY KIND, DELAYED OR FAILED ELECTRONIC COMMUNICATIONS, OR UNAVAILABLE OR FAILED NETWORK CONNECTIONS. NO WRITTEN INFORMATION OR ORAL ADVICE GIVEN BY US, WILL CREATE A WARRANTY; NOR MAY YOU RELY ON ANY SUCH ADVICE OR INFORMATION. YOU FURTHER ASSUME THE RISK THAT CERTAIN HISTORIC SUBJECTS, ACCIDENTS, ATTITUDES, AND STEREOTYPES AND DESCRIPTIONS OR DEPICTIONS THEREOF, SOME GRAPHIC, MAY PROVE TO BE DISTURBING AND THAT WARNINGS AND RATING FILTERS RELATING TO SUCH CONTENT MAY BE ABSENT OR INEFFECTIVE.
 
-
                 <br><br>
                 By using this website, you explicitly waive the rights (if applicable) which states that: "A general release does not extend to claims which the creditor does not know or suspect to exist in his favor at the time of executing the release, which, if known by him must have materially affected his settlement with the debtor" and (as applicable) you waive all such similar rights which may exist in other jurisdictions.
 
@@ -89,7 +88,6 @@
 
                 <br><br>
                 IF YOU USE THE INFORMATION, SERVICES, PERMISSIONS, OR PRODUCTS OF A THIRD PARTY OR THEIR WEBSITE LINKED TO OR OTHERWISE REFERRED TO ON OR THROUGH OUR WEBSITE, OR IN ANY COMMUNICATION FROM US, SUCH THIRD PARTY IS SOLELY RESPONSIBLE FOR ITS INFORMATION, SERVICES, PERMISSIONS, AND PRODUCTS, AND YOU RELEASE US FROM ANY AND ALL CLAIMS, DEMANDS AND DAMAGES, ACTUAL AND CONSEQUENTIAL, OF EVERY KIND AND NATURE, KNOWN AND UNKNOWN, DISCLOSED AND UNDISCLOSED, SUSPECTED AND UNSUSPECTED, ARISING OUT OF OR IN ANY WAY CONNECTED WITH SUCH INFORMATION, SERVICES, OR PRODUCTS, ANY TRANSACTIONS BETWEEN YOU AND SUCH THIRD PARTY, AND ANY DISPUTES BETWEEN YOU AND SUCH THIRD PARTY.
-
 
                 <br><br>
                 NEITHER WE NOR OUR DONORS SHALL BE HELD LIABLE FOR (I) ANY DAMAGE TO, OR LOSS OF, PROPERTY OR INJURY TO, OR DEATH OF, PERSONS OCCASIONED DIRECTLY OR INDIRECTLY BY AN ACT OR OMISSION, AND (II) ANY LOSS OR DAMAGE DUE TO DELAY, CANCELLATION, OR DISRUPTION IN ANY MANNER CAUSED BY THE LAWS, REGULATIONS, ACTS OR FAILURES TO ACT, DEMANDS, ORDERS, OR INTERPOSITIONS OF ANY GOVERNMENT OR ANY SUBDIVISION OR AGENT, THEREOF, OR BY ACTS OF GOD, STRIKES, FIRE, FLOOD, WAR, REBELLION, TERRORISM, INSURRECTION, SICKNESS, INJURY, QUARANTINE, EPIDEMICS, THEFT, OR ANY OTHER CAUSE(S) BEYOND OUR CONTROL. YOU WAIVE ANY CLAIM AGAINST US OR OUR DONORS FOR ANY SUCH LOSS, DAMAGE, INJURY, OR DEATH.
@@ -112,7 +110,6 @@
                 <br><br>
                 YOU AGREE AND COVENANT TO DEFEND BY COUNSEL REASONABLY ACCEPTED BY US, HOLD HARMLESS, EXONERATE, AND INDEMNIFY THE COPYRIGHT HOLDER(S), OTHER RIGHTS HOLDERS, Fastmovies1.com, LICENSOR, AND OTHER PARTIES THAT PROVIDE OR LICENSE THIS WEBSITE AND ITS CONTENT, AND THEIR AFFILIATES, OFFICERS, AGENTS AND SERVANTS (OR THE LIKE) FOR, AGAINST, AND ON ACCOUNT OF ANY AND ALL DAMAGES, CLAIMS, DEMANDS, PROCEEDINGS, SUITS, CAUSES OF ACTION, JUDGMENTS, SETTLEMENTS, LOSSES, OBLIGATIONS, EXPENSES, TAXES, PENALTIES, LEVIES, COSTS, DISBURSEMENTS, OR LIABILITY, OR THE LIKE, INCLUDING CONSULTANTS', ACCOUNTANTS' AND ATTORNEYS' FEES AND COURT COSTS, ARISING OUT OF, RELATING TO, IN ANY WAY CONNECTED WITH, EITHER DIRECTLY OR INDIRECTLY, OR RESULTING FROM YOUR ACCESS TO OR USE OR MISUSE OF THIS WEBSITE OR ASSOCIATED ALGORITHM(S), SOFTWARE, HARDWARE, INTERNET USAGE, INFORMATION, WEB PAGES, TORRENTS, DOCUMENTS, TEXT, E-MAIL, OR OTHER CONTENT, COMMUNICATION, OR USAGE, OR YOUR REPRESENTATIONS HEREUNDER, OR YOUR VIOLATION OF THIS AGREEMENT, OR FACTS WHICH IF TRUE WOULD BE IN VIOLATION OF THIS AGREEMENT, INCLUDING BUT NOT LIMITED TO ANY USE WHICH YOU MAKE, SUFFER, OR PERMIT TO BE MADE, OR YOUR WITHHOLDING OF INFORMATION, OR YOUR PROVIDING INACCURATE INFORMATION. YOU FURTHER AGREE, AND NOT IN LIMITATION HEREOF, THAT ANY CLAIM(S) BY YOU AGAINST US THAT ARE NOT AS EXPRESSLY AUTHORIZED HEREIN OR ARE IN AN AMOUNT EXCEEDING THAT EXPRESSLY AUTHORIZED HEREIN SHALL NOT BE EXCEPTED FROM THE FORGOING. YOU ADDITIONALLY AGREE THAT IF YOU ARE PROHIBITED FROM ACCESS TO OR USE OF THIS WEBSITE IN WHOLE OR PART, BUT YOU NEVERTHELESS DO ACCESS OR USE THIS WEBSITE IN VIOLATION OF THE PROHIBITION, OR IN AN UNLAWFUL MANNER, THAT THE FORGOING SHALL APPLY, BUT THE AMOUNT SHALL BE DOUBLED AS A PENALTY FOR EXPOSING US TO LIABILITY WHEN YOUR USE WAS PROHIBITED OR UNLAWFUL. IF WE CONSEQUENTLY SEEK WRITTEN ASSURANCES FROM YOU CONCERNING YOUR PROMISE TO INDEMNIFY US AND YOU FAIL TO PROVIDE SUCH ASSURANCES WITHIN SEVEN DAYS, YOUR FAILURE SHALL CONSTITUTE A BREACH OF THIS USER AGREEMENT, AND IN SUCH EVENT, YOU AGREE TO PAY US ADDITIONAL DAMAGES FOR YOUR FAILURE TO PROVIDE SUCH ASSURANCES IN THE AMOUNT OF TWICE THE GREATER OF THE ACTUAL OR POTENTIAL LIABILITY SO CREATED BY EACH SUCH DAMAGES, CLAIM, DEMAND, PROCEEDING, SUIT, CAUSE OF ACTION, JUDGMENT, SETTLEMENT, LOSS, OBLIGATION, EXPENSE, TAX, PENALTY, LEVY, COST, DISBURSEMENT, OR LIABILITY, OR THE LIKE.
 
-
                 <br><br>
                 DISPUTE RESOLUTION
 
@@ -134,7 +131,122 @@
 
                 <br><br>
                 All contents on this website, both textual and graphic, including but not limited to computer code and images, and all e-mail or other messages or correspondence from Fastmovies1.com are the property of Fastmovies1.com, are copyrighted, and may not be reproduced or published without permission. Fastmovies1, Fastmovies1.com are trademarks and service marks of Fastmovies1.com. The "Fastmovies1" is the title of this publication only.
+            </div> --}}
+            <div class="bg-gray-800 p-4 text-white">
+                <h3 class="text-lg font-medium">TERMS AND CONDITIONS</h3>
+                <h4 class="text-base font-medium mt-4">INTRODUCTION</h4>
+                <p class="text-sm mt-2">Welcome to Fastmovies1!</p>
+                <p class="text-sm">These are our terms and conditions for our website https://www.fastmovies1.com</p>
+                <p class="text-sm">By accessing Fastmovies1 we assume you accept these terms and conditions. Do not
+                    continue to use Fastmovies1 if you do not agree to take all of the terms and conditions stated on
+                    this page.</p>
+                <p class="text-sm">The following terminology applies to these Terms and Conditions, Privacy Statement and
+                    Disclaimer Notice and all Agreements: "Client", "You" and "Your" refers to you, the person log on
+                    this website and compliant to the Company’s terms and conditions. "The Company", "Ourselves", "We",
+                    "Our" and "Us", refers to our Company. "Party", "Parties", or "Us", refers to both the Client and
+                    ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to
+                    undertake the process of our assistance to the Client in the most appropriate manner for the express
+                    purpose of meeting the Client’s needs in respect of provision of the Company’s stated services, in
+                    accordance with and subject to, prevailing law of Netherlands. Any use of the above terminology or
+                    other words in the singular, plural, capitalization and/or he/she or they, are taken as
+                    interchangeable and therefore as referring to same.</p>
+                <h4 class="text-base font-medium mt-4">COOKIES</h4>
+                <p class="text-sm mt-2">We employ the use of cookies. By accessing Fastmovies1, you agreed to use
+                    cookies in agreement with the Fastmovies1's Privacy Policy.</p>
+
+                <p class="text-sm">Most interactive websites use cookies to let us retrieve the user’s details for each
+                    visit. Cookies are used by our website to enable the functionality of certain areas to make it
+                    easier for people visiting our website. Some of our affiliate/advertising partners may also use
+                    cookies.</p>
+                <h4 class="text-base font-medium mt-4">LICENSE</h4>
+                <p class="text-sm mt-2">Unless otherwise stated, Fastmovies1 and/or its licensors own the intellectual
+                    property rights for all material on Fastmovies1. All intellectual property rights are reserved. You
+                    may access this from Fastmovies1 for your own personal use subjected to restrictions set in these
+                    terms and conditions.</p>
+                <p class="text-sm">You must not:</p>
+                <ul class="list-disc list-inside">
+                    <li>Republish material from Fastmovies1</li>
+                    <li>Sell, rent or sub-license material from Fastmovies1</li>
+                    <li>Reproduce, duplicate or copy material from Fastmovies1</li>
+                    <li>Redistribute content from Fastmovies1</li>
+                </ul>
+                <p class="text-sm">This Agreement shall begin on the date hereof.</p>
+                <p class="text-sm">Parts of this website offer an opportunity for users to post and exchange opinions
+                    and information in certain areas of the website. Fastmovies1 does not filter, edit, publish or
+                    review Comments prior to their presence on the website. Comments do not reflect the views and
+                    opinions of Fastmovies1, its agents and/or affiliates. Comments reflect the views and opinions of
+                    the person who post their views and opinions. To the extent permitted by applicable laws,
+                    Fastmovies1 shall not be liable for the Comments or for any liability, damages or expenses caused
+                    and/or suffered as a result of any use of and/or posting of and/or appearance of the Comments on
+                    this website.</p>
+
+                <p class="text-sm">Fastmovies1 reserves the right to monitor all Comments and to remove any Comments
+                    which can be considered inappropriate, offensive or causes breach of these Terms and Conditions.</p>
+                <p class="text-sm">You warrant and represent that:</p>
+                <ul class="list-disc list-inside">
+                    <li>You are entitled to post the Comments on our website and have all necessary licenses and
+                        consents to do so;</li>
+                    <li>The Comments do not invade any intellectual property right, including without limitation
+                        copyright, patent or trademark of any third party;</li>
+                    <li>The Comments do not contain any defamatory, libelous, offensive, indecent or otherwise unlawful
+                        material which is an invasion of privacy</li>
+                    <li>The Comments will not be used to solicit or promote business or custom or present commercial
+                        activities or unlawful activity.</li>
+                </ul>
+                <p class="text-sm">You hereby grant Fastmovies1 a non-exclusive license to use, reproduce, edit and
+                    authorize others to use, reproduce and edit any of your Comments in any and all forms, formats or
+                    media.</p>
+                <h4 class="text-base font-medium mt-4">HYPERLINKING TO OUR CONTENT</h4>
+                <p class="text-sm mt-2">The following organizations may link to our website without prior written
+                    approval:</p>
+                <ul class="list-disc list-inside">
+                    <li>Government agencies;</li>
+                    <li>Search engines;</li>
+                    <li>Online directory distributors may link to our Website in the same manner as they hyperlink to
+                        the Websites of other listed businesses; and</li>
+                    <li>System wide Accredited Businesses except soliciting non-profit organizations, charity shopping
+                        malls, and charity fundraising groups which may not hyperlink to our Web site.</li>
+                </ul>
+                <p class="text-sm">These organizations may link to our home page, to publications or to other Website
+                    information so long as the link: (a) is not in any way deceptive; (b) does not falsely imply
+                    sponsorship, endorsement or approval of the linking party and its products or services; and (c) fits
+                    within the context of the linking party’s site.</p>
+                <p class="text-sm">We may consider and approve in our sole discretion other link requests from the
+                    following types of organizations:</p>
+                <ul class="list-disc list-inside">
+                    <li>commonly-known consumer and/or business information sources;</li>
+                    <li>dot.com community sites;</li>
+                    <li>associations or other groups representing charities;</li>
+                    <li>online directory distributors;</li>
+                    <li> internet portals;</li>
+                    <li>accounting, law and consulting firms; and</li>
+                    <li>educational institutions and trade associations.</li>
+
+                </ul>
+                <p class="text-sm">We will approve link requests from these organizations if we decide that: (a) the
+                    link would not make us look unfavorably to ourselves or to our accredited businesses; (b) the
+                    organization does not have any negative records with us; (c) the benefit to us from the visibility
+                    of the hyperlink compensates the absence of Fastmovies1; and (d) the link is in the context of
+                    general resource information.</p>
+                <p class="text-sm">These organizations may link to our home page so long as the link: (a) is not in any
+                    way deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party
+                    and its products or services; and (c) fits within the context of the linking party’s site.</p>
+                <p class="text-sm">If you are one of the organizations listed in paragraph 2 above and are interested in
+                    linking to our website, you must inform us by sending an e-mail to Fastmovies1. Please include your
+                    name, your organization name, contact information as well as the URL of your site, a list of any
+                    URLs from which you intend to link to our Website, and a list of the URLs on our site to which you
+                    would like to link. Wait 2-3 weeks for a response.</p>
+                <p class="text-sm">Approved organizations may hyperlink to our Website as follows:</p>
+                <ul class="list-disc list-inside">
+                    <li>By use of our corporate name; or</li>
+                    <li>By use of the uniform resource locator being linked to; or</li>
+                    <li>By use of any other description of our Website being linked to that makes sense within the
+                        context and format of content on the linking party’s site.</li>
+                </ul>
+                <p class="text-sm">No use of Fastmovies1's logo or other artwork will be allowed for linking absent a
+                    trademark license agreement.</p>
             </div>
+
         </div>
     </div>
 </x-app-layout>

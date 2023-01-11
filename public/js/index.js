@@ -141,32 +141,32 @@ $(document).ready(function () {
 });
 // adblocker
 /* setInterval(function () {
-    fetch(
-        "http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-    ).catch(() => {
-        // check if anti-adblock class already exists
-        if ($(".anti-adblock").length) {
-            console.clear();
-        } else {
-            let adp_underlay = document.createElement("div");
-            adp_underlay.className = "adp-underlay";
-            document.body.appendChild(adp_underlay);
-            let adp = document.createElement("div");
-            adp.className = "adp";
-            adp.innerHTML = `
+        fetch(
+            "http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        ).catch(() => {
+            // check if anti-adblock class already exists
+            if ($(".anti-adblock").length) {
+                console.clear();
+            } else {
+                let adp_underlay = document.createElement("div");
+                adp_underlay.className = "adp-underlay";
+                document.body.appendChild(adp_underlay);
+                let adp = document.createElement("div");
+                adp.className = "adp";
+                adp.innerHTML = `
                 <h3>Ad Blocker Detected!</h3>
                 <p>We use advertisements to keep our website online, could you please whitelist our website, thanks!</p>
                 <a href="#" class="anti-adblock">Okay</a>
             `;
 
-            document.body.appendChild(adp);
-            adp.querySelector("a").onclick = (e) => {
-                e.preventDefault();
-                document.body.removeChild(adp_underlay);
-                document.body.removeChild(adp);
-            };
-        }
-    });
+                document.body.appendChild(adp);
+                adp.querySelector("a").onclick = (e) => {
+                    e.preventDefault();
+                    document.body.removeChild(adp_underlay);
+                    document.body.removeChild(adp);
+                };
+            }
+        });
 }, 3000); */
 
 // remove fixed class if footer is visible
@@ -195,22 +195,22 @@ $(document).ready(function () {
     );
 });
 /* $(document).ready(function () {
-    $("#category").hover(
-        function () {
-            console.log("hover");
-            $(".categoryms").removeClass("hidden");
-        },
-        function () {
-            $(".categoryms").addClass("hidden");
-        }
-    );
+        $("#category").hover(
+            function () {
+                console.log("hover");
+                $(".categoryms").removeClass("hidden");
+            },
+            function () {
+                $(".categoryms").addClass("hidden");
+            }
+        );
     $(".categoryms").hover(
-        function () {
-            console.log("hover");
-            $(".categoryms").removeClass("hidden");
+    function () {
+        console.log("hover");
+    $(".categoryms").removeClass("hidden");
         },
-        function () {
-            $(".categoryms").addClass("hidden");
+    function () {
+        $(".categoryms").addClass("hidden");
         }
     );
 }); */
@@ -218,36 +218,55 @@ $(document).ready(function () {
 // improved search
 $(document).ready(function () {
     var timeout = null;
-    // on search input keyup or change
     $("#searchTerm").on("keyup input", function () {
         clearTimeout(timeout);
         timeout = setTimeout(() => {
-            $("#results-wrapper").show();
-            // get selected search type from select option
-            var searchType = $("#searchOption").val();
-            // get search input value
-            var inputVal = $(this).val();
-            console.log(inputVal);
-            console.log(searchType);
-            // results div
+            //get search term
+            var searchTerm = $(this).val();
+            // result div
             var resultDropdown = $("#results");
-            resultDropdown.empty();
-            $(".loaderSearch").show();
-            // if search input value is not empty
-            if (inputVal.length) {
-                // show loading icon
-                // $("#results").show();
-                // ajax call to search.php
-                $.get("/search/" + inputVal, {
+            // if search term is not empty
+            if (searchTerm.length) {
+                // show results div
+                $(".loader-se").show();
+                // clear results div
+                resultDropdown.empty();
+                $.get("/search/" + searchTerm, {
                     // term: inputVal,
                 }).done(function (data) {
-                    // display results
+                    // show movie and series header
+                    // $(".search_head").show();
+                    resultDropdown.show();
+                    // Display the returned data in browser
                     resultDropdown.html(data);
-                    // hide loading icon
-                    $(".loaderSearch").fadeOut();
+                    if (resultDropdown.length > 0) {
+                        $(".loader-se").hide();
+                    }
                 });
+            } else {
+                resultDropdown.empty();
+                resultDropdown.hide();
             }
         }, 1000);
     });
 });
-console.log("hello");
+// add X to remove search term
+$(document).ready(function () {
+    $("#searchTerm").on("keyup input", function () {
+        if ($(this).val().length > 0) {
+            $(".search_close").show();
+        } else {
+            $(".search_close").hide();
+        }
+    });
+    $(".search_close").click(function () {
+        $("#searchTerm").val("");
+        // $("#results").hide();
+        $(".search_close").hide();
+    });
+
+});
+function closeResult() {
+    $("#results").fadeOut();
+    // console.log("clicked");
+}

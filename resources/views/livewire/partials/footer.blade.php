@@ -303,6 +303,9 @@
                     <li class="w-2/3 text-base font-bold text-500 py-1.5 hover:text-600 cursor-pointer">
                         <a href="/terms">Terms and conditions</a>
                     </li>
+                    <li class="w-2/3 text-base font-bold text-500 py-1.5 hover:text-600 cursor-pointer">
+                        <a href="/terms">Privacy</a>
+                    </li>
                 </ul>
             </div>
             <div class="w-11/12 md:w-1/3 lg:w-1/3 mx-auto">
@@ -407,8 +410,8 @@
                     <li class="border-2 py-2 px-3 border-white mx-2 my-3 dark:text-white"><a
                             href="/movies/category/Thriller" class="hover:text-500 duration-500">Thriller
                             ({{ $catt[16]['thriller'] }})</li>
-                    <li class="border-2 py-2 px-3 border-white mx-2 my-3 dark:text-white"><a href="/movies/category/War"
-                            class="hover:text-500 duration-500">War
+                    <li class="border-2 py-2 px-3 border-white mx-2 my-3 dark:text-white"><a
+                            href="/movies/category/War" class="hover:text-500 duration-500">War
                             ({{ $catt[17]['war'] }}) </a>
                     </li>
                     <li class="border-2 py-2 px-3 border-white mx-2 my-3 dark:text-white"><a
